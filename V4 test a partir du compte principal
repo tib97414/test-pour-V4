@@ -570,21 +570,21 @@ Résultats R1 ( Avions + Routes ) :
 
 3. Retour -> IMF - Imphal
 - Status :
-- Embarquement : 5h23 le 13/04
+- Embarquement : 05h23 le 13/04
 - Décollage : 05h43 le 13/04
-- Débarquement : 9h47 le 13/04
+- Débarquement : 09h47 le 13/04
 - Avion disponible : 10h15 le 13/04
 
 4. Résultats Routes 1 :
-- Chiffres d'affaires :  $
-- Dont chiffres d'affaires billetterie :  $
-- Dont revenus auxiliaires :  $
-- Coût vols : -  $
-- Dont frais de kérosène : -  $
-- Dont frais d'aéroport : -  $
+- Chiffres d'affaires : 1 210 095 $
+- Dont chiffres d'affaires billetterie : 861 448 $
+- Dont revenus auxiliaires : 348 657 $
+- Coût vols : - 101 182 $
+- Dont frais de kérosène : - 64 166 $
+- Dont frais d'aéroport : - 37 016 $
 - Dont autres charges : 0 $
 
-- Résultats du vol :  $
+- Résultats du vol : 1 108 913 $
 
 Routes :
 1. (CGK) -> PNQ
@@ -628,3 +628,48 @@ Résultats R2 ( Avions + Routes ) :
 - Dont autres charges : 0 $
 
 - Résultats du vol : 1 271 939 $
+
+
+Routes :
+1. (CGK) -> POM
+- Catégorie 7
+- Distance depuis CGK : 4482 km
+- Taxes : 11 803 $
+- Tarifs billet classe eco : 1540 $
+- Tarifs billet classe business : 2048 $
+- Tarifs billet classe première : 3541 $
+- Tarifs billet cargo : 5794 $
+- Demande classe eco : 5703
+- Demande classe business : 221
+- Demande classe première : 29
+- Demande cargo : 561
+
+Résultats R3 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 196 sièges eco / 52 sièges business/ 2 sièges premières / 17 cargo.
+- 392 sièges eco / 104 sièges business/ 4 sièges premières / 34 cargo visibles dans résultats.
+
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 22h15 le 13/04
+- Décollage : 22h35 le 13/04
+- Débarquement : 03h30 le 14/04
+- Préparation du retour : 03h50 le 14/04
+
+3. Retour -> POM - Port Moresby
+- Status :
+- Embarquement : 04h30 le 14/04
+- Décollage : 04h50 le 14/04
+- Débarquement : 09h45 le 14/04
+- Avion disponible : 10h15 le 14/04
+
+4. Résultats Routes 3 :
+- Chiffres d'affaires : 1 385 329 $
+- Dont chiffres d'affaires billetterie : 1 027 832 $
+- Dont revenus auxiliaires : 357 497 $
+- Coût vols : - 118 997 $
+- Dont frais de kérosène : - 77 685 $
+- Dont frais d'aéroport : - 41 312 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 1 266 332 $
