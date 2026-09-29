@@ -1,0 +1,1448 @@
+Base in-game — vérité et vérification
+
+Carnet de référence des observations réalisées directement dans Airlines Manager.
+
+Objectif : conserver les valeurs réellement visibles dans le jeu, les résultats obtenus, les découvertes, les différences, les hypothèses, les litiges et les éléments restant à vérifier avant toute implémentation dans le V4.
+
+───
+
+0. Règles du carnet
+Principe fondamental
+
+Le jeu fait foi.
+
+Une formule ou une interprétation ne doit pas être considérée comme vraie uniquement parce qu'elle semble logique ou fonctionne sur un exemple.
+
+Chaque information doit être classée selon son niveau de certitude.
+
+Niveaux de certitude
+
+[OBSERVÉ] — valeur directement visible dans le jeu.
+[CALCULÉ] — valeur obtenue uniquement à partir de valeurs observées.
+[CONFIRMÉ] — relation vérifiée sur plusieurs observations indépendantes.
+[HYPOTHÈSE] — explication plausible mais non suffisamment vérifiée.
+[À TESTER] — test nécessaire pour confirmer ou invalider.
+[LITIGE] — deux observations ou interprétations semblent incompatibles.
+[ABANDONNÉ] — hypothèse ou formule invalidée par les observations.
+
+Règle importante
+
+Ne jamais remplacer une valeur observée par une valeur calculée.
+
+Exemple :
+
+Taxes affichées : 12 273 $
+Frais d'aéroport affichés : 42 957 $
+
+Calcul théorique :
+
+12 273 × 7 / 2 = 42 955,50 $
+
+→ Écart observé : +1,50 $
+
+L'écart doit rester enregistré.
+
+Il ne faut pas corriger artificiellement la valeur du jeu pour faire fonctionner la formule.
+
+Principe — origine et précision des données
+
+Les valeurs saisissables/modifiables par le joueur sont considérées comme des valeurs d'entrée exactes dans le modèle, sauf preuve contraire.
+
+Les valeurs générées automatiquement par le jeu peuvent être affichées sous une forme arrondie alors que le moteur utilise une précision supérieure.
+
+Une différence entre une valeur affichée et un résultat calculé ne doit donc pas immédiatement être considérée comme une erreur de formule.
+
+Lorsqu'une valeur interne non observable permet d'expliquer de manière cohérente plusieurs résultats indépendants, elle doit être conservée comme [HYPOTHÈSE] et non remplacée par la valeur affichée.
+
+Principe — répétition expérimentale
+
+Lorsqu'un même appareil et une même configuration sont utilisés plusieurs fois sur une même route, chaque passage doit être conservé comme une observation indépendante.
+
+Une répétition identique n'est pas une donnée inutile : elle permet notamment de vérifier si une valeur dépend du jour, de l'heure ou d'un facteur temporel.
+
+───
+
+1. Services
+1.1 PAX
+Paramètre	Valeur	Statut
+Distraction	+400	[OBSERVÉ]
+Attractivité des tarifs	0	[OBSERVÉ]
+Ponctualité	+250	[OBSERVÉ]
+Sécurité	0	[OBSERVÉ]
+Confort	+70	[OBSERVÉ]
+Revenus auxiliaires	+540	[OBSERVÉ]
+Frais	−235	[OBSERVÉ]
+Demande passager	0	[OBSERVÉ]
+1.2 CARGO
+Paramètre	Valeur	Statut
+Livraison Cargo	+160	[OBSERVÉ]
+Attractivité de l'offre	+160	[OBSERVÉ]
+
+───
+
+2. Employées
+2.1 PAX
+Paramètre	Valeur	Statut
+Distraction	+500	[OBSERVÉ]
+Attractivité des tarifs	+500	[OBSERVÉ]
+Ponctualité	+500	[OBSERVÉ]
+Sécurité	+500	[OBSERVÉ]
+Confort	+500	[OBSERVÉ]
+Revenus auxiliaires	+500	[OBSERVÉ]
+Frais	−250	[OBSERVÉ]
+Demande passager	+5 %	[OBSERVÉ]
+2.2 CARGO
+Paramètre	Valeur	Statut
+Livraison Cargo	+500	[OBSERVÉ]
+Attractivité de l'offre	+500	[OBSERVÉ]
+
+───
+
+3. Bonus Agenda
+3.1 PAX
+Paramètre	Valeur	Statut
+Distraction	?	[À TESTER]
+Attractivité des tarifs	?	[À TESTER]
+Ponctualité	?	[À TESTER]
+Sécurité	?	[À TESTER]
+Confort	?	[À TESTER]
+Revenus auxiliaires	?	[À TESTER]
+Frais	?	[À TESTER]
+Demande passager	?	[À TESTER]
+3.2 CARGO
+Paramètre	Valeur	Statut
+Livraison Cargo	?	[À TESTER]
+Attractivité de l'offre	?	[À TESTER]
+
+───
+
+4. Bonus total observé
+4.1 PAX
+Paramètre	Total	Statut
+Distraction	+931	[OBSERVÉ]
+Attractivité des tarifs	+559	[OBSERVÉ]
+Ponctualité	+780	[OBSERVÉ]
+Sécurité	+537	[OBSERVÉ]
+Confort	+570	[OBSERVÉ]
+Revenus auxiliaires	+1000	[OBSERVÉ]
+Frais	−485	[OBSERVÉ]
+Demande passager	+5 %	[OBSERVÉ]
+Valeurs Agenda calculées
+Paramètre	Calcul	Résultat	Statut
+Distraction	931 − 400 − 500	+31	[CALCULÉ]
+Attractivité des tarifs	559 − 0 − 500	+59	[CALCULÉ]
+Ponctualité	780 − 250 − 500	+30	[CALCULÉ]
+Sécurité	537 − 0 − 500	+37	[CALCULÉ]
+Confort	570 − 70 − 500	0	[CALCULÉ]
+Frais	−485 − (−235) − (−250)	0	[CALCULÉ]
+Demande passager	+5 % − 0 % − 5 %	0 %	[CALCULÉ]
+Revenus auxiliaires
+
+Services : +540
+Employées : +500
+Agenda : ?
+Total affiché : +1000
+
+Le total est plafonné à +1000.
+
+La valeur réelle du bonus avant plafonnement reste à déterminer.
+
+Statut : [À TESTER]
+
+───
+
+5. Avions
+5.1 A350-900XWB
+
+Catégorie : 7
+Rayon d'action : 16 780 km
+Vitesse : 911 km/h
+Consommation : 2,13 L/pax/100 km
+Sièges : 475
+Full éco : 475 sièges
+Full business : 263 sièges
+Full première : 113 sièges
+Cargo sans siège : 48 t
+Charge utile : 48 t
+Full éco : 47,50 t / 48 t
+Full business : 32,88 t / 48 t
+Full première : 16,95 t / 48 t
+Full cargo : 48 t / 48 t
+
+Statut : [OBSERVÉ]
+
+Masse individuelle observée
+
+Tests réalisés sur XWB vide puis reproduits sur l'A350-900ULR et d'autres appareils.
+
+Type	Masse individuelle retenue	Observation
+1 PAX éco	0,100 t	cohérent avec 10 éco = 1,00 t
+1 PAX business	0,125 t	1 business affiché ~0,12 t ; 10 = 1,25 t
+1 PAX première	0,150 t	cohérent avec les tests
+1 cargo	1,000 t	cohérent avec 10 cargo = 10,00 t
+Vérifications par configurations mixtes
+
+Tests supplémentaires réalisés sur l'ULR et d'autres appareils :
+
+1 business + 1 première
+
+Masse observée : 0,28 t
+
+Calcul :
+
+0,125 + 0,150
+= 0,275 t
+→ 0,28 t affiché
+
+1 business + 1 éco
+
+Masse observée : 0,22 t
+
+Calcul :
+
+0,125 + 0,100
+= 0,225 t
+→ 0,22 t affiché
+
+1 éco + 1 première
+
+Masse observée : 0,25 t
+
+Calcul :
+
+0,100 + 0,150
+= 0,250 t
+→ 0,25 t affiché
+
+1 éco + 1 business + 1 première
+
+Masse observée : 0,38 t
+
+Calcul :
+
+0,100 + 0,125 + 0,150
+= 0,375 t
+→ 0,38 t affiché
+
+Ces quatre combinaisons sont cohérentes avec les masses individuelles précédemment observées.
+
+Masse par unité
+
+Éco = 0,100 t
+Business = 0,125 t
+Première = 0,150 t
+Cargo = 1,000 t
+
+Statut : [CONFIRMÉ]
+
+La confirmation repose désormais sur :
+
+mesures individuelles ;
+configurations complètes ;
+configurations mixtes ;
+plusieurs appareils ;
+plusieurs combinaisons de catégories.
+Précision de l'affichage
+
+Les résultats montrent que le jeu affiche la masse au centième de tonne.
+
+Exemples :
+
+0,225 t → 0,22 t affiché
+0,275 t → 0,28 t affiché
+0,375 t → 0,38 t affiché
+
+Le mécanisme exact permettant de passer de la valeur interne à la valeur affichée n'est pas encore déterminé.
+
+Statut : [OBSERVÉ] pour la précision d'affichage
+
+Statut du mécanisme d'arrondi : [À TESTER]
+
+Relations avec les configurations XWB
+
+475 éco × 0,100
+= 47,50 t
+
+263 business × 0,125
+= 32,875 t
+→ 32,88 t affichées
+
+113 première × 0,150
+= 16,95 t
+
+48 cargo × 1,000
+= 48,00 t
+
+Ces calculs correspondent aux valeurs observées.
+
+Statut : [CONFIRMÉ]
+
+Structure candidate de la charge utile
+Masse =
+    (nombre éco × 0,100)
+  + (nombre business × 0,125)
+  + (nombre première × 0,150)
+  + (cargo × 1,000)
+
+Statut : [CONFIRMÉ pour le calcul de masse des configurations testées]
+
+Attention :
+
+La relation des masses est désormais fortement établie.
+
+En revanche, son utilisation exacte par le moteur carburant reste une question distincte.
+
+Utilisation de cette masse dans le calcul carburant : [À TESTER]
+
+5.2 A350-900ULR
+
+Catégorie : 7
+Rayon d'action : 18 000 km
+Vitesse : 911 km/h
+Consommation : 2,13 L/pax/100 km
+Sièges : 440
+Full éco : 440 sièges
+Full business : 244 sièges
+Full première : 104 sièges
+Cargo sans siège : 44 t
+Charge utile : 44 t
+Full éco : 44 t / 44 t
+Full business : 30,50 t / 44 t
+Full première : 15,60 t / 44 t
+Full cargo : 44 t / 44 t
+
+Statut : [OBSERVÉ]
+
+Configuration ULR testée
+
+Configuration observée :
+
+196 sièges éco
+52 sièges business
+2 sièges première
+17 unités cargo
+
+Charge utile calculée :
+
+196 × 0,100
+= 19,60 t
+
+52 × 0,125
+= 6,50 t
+
+2 × 0,150
+= 0,30 t
+
+17 × 1,000
+= 17,00 t
+
+Total :
+
+43,40 t
+
+Statut : [CALCULÉ]
+
+Les résultats visibles affichent deux fois cette configuration :
+
+392 éco
+104 business
+4 première
+34 cargo
+
+Statut : [OBSERVÉ]
+
+La masse de 43,40 t n'utilise pas la totalité des 44 t disponibles.
+
+Cette configuration constitue donc une variation de charge par rapport au XWB full éco :
+
+XWB : 47,50 t
+ULR : 43,40 t
+
+Différence :
+
+47,50 − 43,40
+= 4,10 t
+
+Statut : [CALCULÉ]
+
+Cette variation est particulièrement utile pour les tests carburant.
+
+5.3 Structure expérimentale des vagues
+
+Le circuit étudié comporte 10 routes.
+
+Il est exploité avec 5 vagues de 7 avions.
+
+Vagues 1 à 4
+
+A350-900XWB
+même configuration
+7 avions par vague
+une journée de décalage entre chaque avion
+
+4 vagues × 7 avions = 28 A350-900XWB
+
+Vague 5
+
+A350-900ULR
+7 avions
+nouvelle configuration de sièges
+même circuit de 10 routes
+
+Total
+
+4 × 7 A350-900XWB = 28 avions
+1 × 7 A350-900ULR = 7 avions
+
+Total = 35 avions
+
+Statut : [OBSERVÉ]
+
+Objectif expérimental
+
+XWB × 4 vagues
+→ répétition du même scénario
+
+ULR × 1 vague
+→ changement d'appareil et de configuration sur le même circuit
+
+───
+
+6. Routes de référence
+
+Les routes R1 à R10 et leurs observations financières restent inchangées par rapport à la version fournie :
+
+R1 — CGK → IMF
+R2 — CGK → PNQ
+R3 — CGK → POM
+R4 — CGK → IXC
+R5 — CGK → BHJ
+R6 — CGK → SKZ
+R7 — CGK → PEW
+R8 — CGK → DIR
+R9 — CGK → MZI
+R10 — CGK → BKO
+
+Les données détaillées des dix routes restent celles de la version précédente du carnet.
+
+Statut : [OBSERVÉ]
+
+───
+
+7. Relations déjà observées
+7.1 Nombre de sièges affiché
+
+Configuration XWB :
+
+475 sièges éco
+
+Résultat :
+
+950 sièges
+
+Relation :
+
+475 × 2 = 950
+
+Cette relation est maintenant observée sur R1 à R10.
+
+Pour l'ULR PNQ :
+
+196 éco → 392 éco
+52 business → 104 business
+2 première → 4 première
+17 cargo → 34 cargo
+
+Statut : [CONFIRMÉ pour les configurations observées]
+
+Interprétation :
+
+Le résultat du vol comptabilise deux fois la capacité configurée, ce qui correspond vraisemblablement aux deux segments de la rotation aller-retour.
+
+Statut de l'interprétation : [HYPOTHÈSE FORTE]
+
+───
+
+7.2 Chiffre d'affaires billetterie
+
+Les dix routes XWB vérifient :
+
+CA billetterie
+=
+capacité comptabilisée × tarif
+
+R9 :
+
+950 × 4 053
+= 3 850 350 $
+
+R10 :
+
+950 × 4 184
+= 3 974 800 $
+
+ULR PNQ :
+
+392 × 1 552
+
+104 × 2 064
+4 × 3 569
+34 × 5 841
+= 1 035 910 $
+
+Statut : [CONFIRMÉ]
+
+La relation est confirmée sur :
+
+configuration full éco XWB ;
+configuration mixte ULR.
+
+───
+
+7.3 Chiffre d'affaires total
+CA total
+=
+CA billetterie
++
+revenus auxiliaires
+
+Statut : [CONFIRMÉ]
+
+───
+
+7.4 Coût total du vol
+coût des vols
+=
+kérosène
++
+frais d'aéroport
++
+autres charges
+
+Statut : [CONFIRMÉ]
+
+───
+
+7.5 Résultat du vol
+résultat
+=
+CA total
+−
+coût des vols
+
+Statut : [CONFIRMÉ]
+
+───
+
+7.6 Durée du circuit
+
+Formule testée :
+
+Durée du circuit =
+ARRONDI SUPÉRIEUR À 15 MINUTES
+(
+    ((distance / vitesse) + 1 heure) × 2
+)
+
+Ordre des opérations :
+
+distance / vitesse
+        ↓
+      + 1 h
+        ↓
+       × 2
+        ↓
+arrondi supérieur au quart d'heure
+
+La formule reproduit les 10/10 cycles XWB.
+
+Elle reproduit également la rotation ULR PNQ :
+
+Distance : 4 520 km
+Vitesse : 911 km/h
+Durée calculée : 12h00
+Cycle observé : 12h00
+
+Statut : [CONFIRMÉ — appareils testés à 911 km/h]
+
+Une vitesse différente reste nécessaire pour généraliser la formule.
+
+───
+
+7.7 Temps entre les étapes
+
+Observations répétées :
+
+Embarquement → décollage
+= 20 min
+
+Débarquement → préparation du retour
+= 20 min
+
+Préparation du retour → embarquement
+= 40 min
+
+Statut : [OBSERVÉ]
+
+Interprétation de leur rôle exact dans le calcul du cycle :
+
+[À TESTER]
+
+───
+
+7.8 Durée de vol affichée
+
+Les durées entre décollage et débarquement restent cohérentes avec :
+
+distance / vitesse
+
+pour les dix routes XWB.
+
+L'ULR possède la même vitesse et ne permet donc pas encore de différencier cette relation.
+
+Statut : [TRÈS PROBABLE]
+
+À confirmer avec une vitesse d'avion différente.
+
+───
+
+7.9 CA identique entre les vagues XWB
+
+Sur CGK → IMF, les quatre vagues XWB affichent :
+
+CA prévisionnel : 1 564 149 $
+
+Demandes restantes :
+
+Vague 1 : 4 076 éco
+Vague 2 : 3 126 éco
+Vague 3 : 2 176 éco
+Vague 4 : 1 226 éco
+
+Malgré cette demande restante différente, le CA affiché reste identique.
+
+Statut : [OBSERVÉ]
+
+Interprétation :
+
+Dans cette expérience, le CA d'un vol XWB ne semble pas dépendre de la demande restante lorsque celle-ci permet encore de vendre toute la capacité configurée.
+
+Statut : [HYPOTHÈSE]
+
+À confirmer avec une demande inférieure à la capacité.
+
+───
+
+8. Frais d'aéroport
+
+Formule testée :
+
+taxes × catégorie avion / 2
+
+Pour les avions étudiés :
+
+catégorie = 7
+
+coefficient = 3,5
+
+Route	Taxes	Calcul	Jeu	Écart
+R1	10 576	37 016,00	37 016	+0,00
+R2	12 273	42 955,50	42 957	+1,50
+R3	11 803	41 310,50	41 312	+1,50
+R4	11 690	40 915,00	40 917	+2,00
+R5	11 798	41 293,00	41 296	+3,00
+R6	11 957	41 849,50	41 851	+1,50
+R7	12 247	42 864,50	42 865	+0,50
+R8	13 371	46 798,50	46 799	+0,50
+R9	16 963	59 370,50	59 370	−0,50
+R10	17 615	61 652,50	61 653	+0,50
+Conclusion
+
+La formule reste fortement compatible avec les observations.
+
+L'ancienne hypothèse :
+
+taxe interne = taxe affichée + 0,5 $
+
+est abandonnée.
+
+Une précision interne des taxes reste possible, tout comme :
+
+arrondi de la valeur affichée ;
+arrondi intermédiaire ;
+traitement particulier des taxes ;
+arrondi final ;
+combinaison de plusieurs mécanismes.
+
+Statut : [LITIGE OUVERT]
+
+───
+
+9. Kérosène
+9.1 Observations XWB
+Route	Distance	Kérosène	$/km approximatif
+R1	3 702 km	70 228 $	~18,97
+R2	4 520 km	85 745 $	~18,97
+R3	4 482 km	85 024 $	~18,97
+R4	5 182 km	98 304 $	~18,97
+R5	5 180 km	98 266 $	~18,97
+R6	5 541 km	105 114 $	~18,97
+R7	5 793 km	109 895 $	~18,97
+R8	7 391 km	140 209 $	~18,97
+R9	12 408 km	235 383 $	~18,97
+R10	12 823 km	243 256 $	~18,97
+
+R9 :
+
+235 383 / 12 408
+≈ 18,9703 $/km
+
+R10 :
+
+243 256 / 12 823
+≈ 18,9703 $/km
+
+Différentiel R4/R5
+
+5 182 − 5 180 = 2 km
+
+98 304 − 98 266 = 38 $
+
+38 / 2 = 19 $/km
+
+La relation reste extrêmement proche de ~18,97 $/km.
+
+Conclusion
+
+Sur les dix routes XWB, avec :
+
+même avion ;
+même consommation affichée ;
+même configuration ;
+même charge configurée ;
+
+le coût du carburant varie de manière extrêmement cohérente avec la distance.
+
+Cependant :
+
+coût carburant ≠ distance × 18,97
+
+comme formule universelle.
+
+La consommation :
+
+2,13 L/pax/100 km
+
+doit rester une variable du modèle.
+
+Structure candidate :
+
+coût carburant =
+fonction(
+    distance,
+    consommation avion,
+    masse/charge utile,
+    configuration,
+    prix carburant éventuel,
+    autres paramètres éventuels
+)
+
+Statut : [HYPOTHÈSE FORTE]
+
+9.2 Comparaison carburant XWB / ULR
+
+Sur CGK → PNQ :
+
+XWB :
+
+Kérosène = 85 745 $
+
+ULR :
+
+Kérosène = 78 344 $
+
+Différence :
+
+85 745 − 78 344
+= 7 401 $
+
+Les deux appareils affichent :
+
+consommation : 2,13 ;
+vitesse : 911 km/h ;
+catégorie : 7.
+
+Mais les configurations diffèrent.
+
+XWB :
+
+475 éco
+→ 47,50 t
+
+ULR :
+
+196 éco
+52 business
+2 première
+17 cargo
+→ 43,40 t
+
+Différence de charge :
+
+47,50 − 43,40
+= 4,10 t
+
+Cette observation est compatible avec une influence de la charge/configuration sur le carburant.
+
+Statut : [OBSERVÉ]
+
+Influence exacte de la masse :
+
+[À TESTER]
+
+9.3 Formule externe trouvée par des joueurs
+
+Formule :
+
+0,1875 × Distance × Consommation × Charge utile en tonnes
+
+Pour PNQ ULR :
+
+0,1875 × 4520 × 2,13 × 43,40
+≈ 78 344,60 $
+
+Coût observé :
+
+78 344 $
+
+Écart :
+
+≈ 0,60 $
+
+Cette correspondance est extrêmement proche.
+
+Elle renforce fortement l'intérêt de la formule comme hypothèse expérimentale.
+
+Elle ne constitue cependant toujours pas une confirmation définitive du modèle interne.
+
+Statut : [HYPOTHÈSE EXTERNE — RENFORCÉE MAIS NON VALIDÉE]
+
+Prochains tests :
+
+autre charge ;
+autre configuration ;
+autre avion ;
+consommation différente ;
+plusieurs niveaux de charge.
+
+───
+
+10. Revenus auxiliaires
+
+Les données XWB R1 à R10 restent inchangées.
+
+Le revenu auxiliaire varie selon la route et ne peut actuellement pas être réduit à une simple fonction monotone de la distance.
+
+Structure actuelle :
+
+revenus auxiliaires =
+fonction(
+    route,
+    distance,
+    facteur avion,
+    configuration,
+    autres paramètres éventuels
+)
+
+Statut : [HYPOTHÈSE]
+
+10.1 Comparaison XWB / ULR sur PNQ
+
+Même route :
+
+CGK → PNQ
+Distance : 4 520 km
+
+XWB :
+
+329 872 $
+
+ULR :
+
+357 330 $
+
+Différence :
+
++27 458 $
+
+La route, distance, catégorie, vitesse et consommation affichée sont identiques.
+
+L'appareil et la configuration diffèrent.
+
+Statut : [OBSERVÉ]
+
+Cette observation est compatible avec une composante dépendant de l'appareil et/ou de la configuration.
+
+Statut : [À TESTER]
+
+Ne pas confondre :
+
+bonus « Revenus auxiliaires » ;
+revenus auxiliaires financiers en $.
+
+───
+
+11. Comparaison XWB / ULR
+11.1 CGK → IMF — prévision
+
+ULR :
+
+392 éco
+104 business
+4 première
+34 cargo
+
+CA affiché :
+
+1 210 095 $
+
+CA billetterie calculé :
+
+861 438 $
+
+CA auxiliaire implicite :
+
+348 657 $
+
+Comparaison :
+
+XWB : 335 799 $
+ULR : 348 657 $
+
+Écart :
+
+12 858 $
+
+Statut : [OBSERVÉ / CALCULÉ — PRÉVISION]
+
+Attention : le résultat ULR IMF réel n'est pas retenu à cause de l'incident.
+
+11.2 CGK → PNQ — résultat réel
+XWB
+
+475 éco
+→ 950 éco
+
+CA : 1 804 272 $
+Billetterie : 1 474 400 $
+Auxiliaires : 329 872 $
+Kérosène : 85 745 $
+Aéroport : 42 957 $
+Résultat : 1 675 570 $
+
+ULR
+
+196 éco
+52 business
+2 première
+17 cargo
+
+Résultat visible :
+
+392 éco
+104 business
+4 première
+34 cargo
+
+CA : 1 393 240 $
+Billetterie : 1 035 910 $
+Auxiliaires : 357 330 $
+Kérosène : 78 344 $
+Aéroport : 42 957 $
+Résultat : 1 271 939 $
+
+Masse
+
+XWB : 47,50 t
+ULR : 43,40 t
+
+Différence :
+
+−4,10 t
+
+Comparaison directe
+Paramètre	XWB	ULR	Différence
+Distance	4 520 km	4 520 km	0
+Catégorie	7	7	0
+Vitesse	911 km/h	911 km/h	0
+Consommation	2,13	2,13	0
+Configuration	475 éco	196/52/2/17	différente
+Charge utile	47,50 t	43,40 t	−4,10 t
+CA billetterie	1 474 400 $	1 035 910 $	−438 490 $
+Auxiliaires	329 872 $	357 330 $	+27 458 $
+Kérosène	85 745 $	78 344 $	−7 401 $
+Aéroport	42 957 $	42 957 $	0
+Résultat	1 675 570 $	1 271 939 $	−403 631 $
+
+Statut : [OBSERVÉ]
+
+Cette comparaison est particulièrement utile pour les recherches :
+
+carburant ;
+masse ;
+revenus auxiliaires ;
+influence de l'appareil ;
+capacité par catégorie.
+
+───
+
+12. Différences / anomalies / litiges
+LITIGE-001 — Frais d'aéroport
+
+Écarts variables entre :
+
+taxes affichées × catégorie / 2
+
+et les frais affichés.
+
+Écart maximal actuel : +3,00 $
+Écart négatif actuel : −0,50 $
+
+Statut : [LITIGE OUVERT]
+
+LITIGE-002 — Bonus auxiliaire plafonné
+
+Services : +540
+Employées : +500
+Agenda : ?
+Total : +1000
+
+Valeur interne avant plafonnement inconnue.
+
+Statut : [OUVERT]
+
+LITIGE-003 — Généralisation de la formule de durée
+
+Formule reproduite sur :
+
+10 routes XWB ;
+1 route ULR ;
+même vitesse de 911 km/h.
+
+Statut : [CONFIRMÉ — appareils testés à 911 km/h]
+
+À tester avec une vitesse différente.
+
+LITIGE-004 — Masse interne / affichage
+
+Les coefficients :
+
+éco = 0,100 t ;
+business = 0,125 t ;
+première = 0,150 t ;
+cargo = 1,000 t
+
+sont désormais confirmés par plusieurs appareils et plusieurs configurations.
+
+Cependant, certains calculs donnent des valeurs intermédiaires comme :
+
+0,225 t → 0,22 t affiché
+0,275 t → 0,28 t affiché
+0,375 t → 0,38 t affiché
+
+Le mécanisme exact de transformation entre la masse interne et la masse affichée n'est pas encore identifié.
+
+Statut : [LITIGE / À TESTER]
+
+Important :
+
+Ce litige concerne l'affichage/précision, pas les coefficients de masse eux-mêmes.
+
+───
+
+13. Tests à réaliser
+Tests durée / vitesse
+
+Terminer les deux dernières routes du circuit.
+→ TERMINÉ
+
+Tester la formule sur l'ensemble du circuit.
+→ TERMINÉ — 10/10 XWB
+
+Tester avec l'A350-900ULR.
+→ PARTIELLEMENT TERMINÉ — même vitesse de 911 km/h
+
+Tester un appareil avec vitesse différente.
+→ À TESTER
+
+Tests revenus auxiliaires
+
+Même route + plusieurs avions.
+→ PARTIELLEMENT RÉALISÉ — XWB/ULR sur PNQ
+
+Même route + XWB/ULR.
+→ RÉALISÉ sur PNQ
+
+Même avion + plusieurs distances.
+→ RÉALISÉ sur 10 distances XWB
+
+Même distance + différentes catégories.
+→ À TESTER
+
+Même route + même avion + configurations différentes.
+→ À TESTER
+
+Vérifier si le facteur avion reste constant.
+
+Comparer directement XWB et ULR sur les 10 routes.
+→ À POURSUIVRE — IMF ULR à refaire sans incident
+
+Tests carburant
+
+XWB full éco.
+→ 10 routes disponibles
+
+ULR avec nouvelle configuration.
+→ PNQ disponible
+
+Même route XWB/ULR.
+→ PNQ réalisé
+
+Différentes masses utiles.
+→ PREMIÈRE VARIATION OBSERVÉE : 47,50 t / 43,40 t
+
+Différentes configurations.
+→ À TESTER
+
+Différentes consommations.
+→ À TESTER
+
+Full éco / business / première / cargo.
+→ À TESTER
+
+Influence de la capacité réellement utilisée.
+→ À TESTER
+
+Influence éventuelle du prix carburant.
+→ À TESTER
+
+Répétition du même vol à plusieurs jours.
+→ À TESTER
+
+Tests masse
+
+Confirmer les masses individuelles sur plusieurs appareils.
+→ TERMINÉ
+
+Tester des configurations mixtes.
+→ TERMINÉ
+
+Première configuration mixte :
+
+196 éco / 52 business / 2 première / 17 cargo
+
+Tests complémentaires :
+
+1 business + 1 première → 0,28 t
+1 business + 1 éco → 0,22 t
+1 éco + 1 première → 0,25 t
+1 éco + 1 business + 1 première → 0,38 t
+
+→ COEFFICIENTS CONFIRMÉS
+
+Formule :
+
+Masse =
+0,100 × éco
++ 0,125 × business
++ 0,150 × première
++ 1,000 × cargo
+
+→ CONFIRMÉE pour les configurations testées
+
+À déterminer :
+
+mécanisme exact d'arrondi de l'affichage ;
+précision interne ;
+utilisation exacte de cette masse dans le moteur carburant.
+Tests frais d'aéroport
+
+Plusieurs catégories sur une même route.
+
+Plusieurs routes de même catégorie.
+
+Comparer taxes affichées / frais affichés.
+
+Rechercher des écarts similaires.
+
+Vérifier les arrondis.
+
+Comparer XWB et ULR sur une même route.
+→ PNQ : frais identiques à 42 957 $
+
+Tests demande
+
+Demande supérieure à la capacité.
+
+Demande inférieure à la capacité.
+
+Changement du bonus de demande.
+
+Différentes configurations de cabine.
+
+Vérifier le comportement du CA lorsque toute la capacité ne peut pas être vendue.
+
+───
+
+14. Journal des découvertes
+ID	Découverte	Statut
+D001	475 sièges configurés → 950 sièges affichés dans le résultat	[CONFIRMÉ — 10 routes]
+D002	CA billetterie = capacité comptabilisée × tarif	[CONFIRMÉ]
+D003	CA total = billetterie + auxiliaires	[CONFIRMÉ]
+D004	Coût vol = kérosène + aéroport + autres charges	[CONFIRMÉ]
+D005	Résultat = CA − coût vol	[CONFIRMÉ]
+D006	Coût carburant extrêmement cohérent avec la distance sur 10 routes	[HYPOTHÈSE FORTE]
+D007	La consommation affichée de l'avion doit rester une variable du modèle carburant	[OBSERVÉ / À TESTER]
+D008	Revenus auxiliaires variables selon la route	[CONFIRMÉ — observations multiples]
+D009	Revenus auxiliaires différents entre XWB et ULR sur IMF	[OBSERVÉ — prévision]
+D010	Bonus auxiliaire total plafonné à +1000	[OBSERVÉ]
+D011	Écart de +1,50 $ sur les frais d'aéroport R2	[LITIGE]
+D012	Écart de +1,50 $ également observé sur R3	[LITIGE]
+D013	Cycle R1 = 10h15	[OBSERVÉ]
+D014	Cycle R2 = 12h00	[OBSERVÉ]
+D015	Cycle R3 = 12h00	[OBSERVÉ]
+D016	Formule (distance / vitesse + 1) × 2 puis arrondi supérieur à 15 min reproduit 10/10 routes XWB	[CONFIRMÉ — XWB]
+D017	×2 avant l'arrondi est nécessaire pour reproduire les cycles observés	[CONFIRMÉ — XWB]
+D018	Embarquement → décollage = 20 min	[OBSERVÉ]
+D019	Débarquement → préparation retour = 20 min	[OBSERVÉ]
+D020	Préparation retour → embarquement = 40 min	[OBSERVÉ]
+D021	Durée décollage → débarquement cohérente avec distance / vitesse	[TRÈS PROBABLE]
+D022	Revenus auxiliaires : R1 > R3 > R2 alors que distance R1 < R3 < R2	[OBSERVÉ]
+D023	R4/R5 montrent une variation du revenu auxiliaire incompatible avec une simple fonction monotone de distance	[OBSERVÉ]
+D024	Masse éco = 0,100 t/pax	[CONFIRMÉ]
+D025	Masse business = 0,125 t/pax	[CONFIRMÉ]
+D026	Masse première = 0,150 t/pax	[CONFIRMÉ]
+D027	Masse cargo = 1,000 t/unité	[CONFIRMÉ]
+D028	475 éco = 47,50 t	[CONFIRMÉ]
+D029	263 business = 32,88 t affichées	[CONFIRMÉ]
+D030	113 première = 16,95 t	[CONFIRMÉ]
+D031	Quatre vagues XWB affichent le même CA sur IMF	[OBSERVÉ]
+D032	Les quatre vagues XWB ont des demandes restantes différentes mais le même CA sur IMF	[OBSERVÉ]
+D033	Circuit expérimental = 5 vagues × 7 avions = 35 avions	[OBSERVÉ]
+D034	Vagues 1–4 = 28 XWB identiques ; vague 5 = 7 ULR nouvelle configuration	[OBSERVÉ]
+D035	ULR IMF : 392 éco / 104 business / 4 première / 34 cargo	[OBSERVÉ]
+D036	ULR IMF : CA affiché = 1 210 095 $	[OBSERVÉ — prévision]
+D037	ULR IMF : CA auxiliaire calculé = 348 657 $	[CALCULÉ — prévision]
+D038	XWB IMF : CA auxiliaire = 335 799 $ ; ULR IMF = 348 657 $	[OBSERVÉ / CALCULÉ — prévision]
+D039	R9 CGK → MZI : cycle = 29h15	[OBSERVÉ]
+D040	R10 CGK → BKO : cycle = 30h15	[OBSERVÉ]
+D041	La formule de durée reproduit R9 et R10	[CONFIRMÉ — XWB]
+D042	Le circuit XWB complet contient désormais 10/10 routes exploitables	[CONFIRMÉ]
+D043	R9 : kérosène = 235 383 $	[OBSERVÉ]
+D044	R10 : kérosène = 243 256 $	[OBSERVÉ]
+D045	R9/R10 confirment ~18,97 $/km sur de grandes distances	[OBSERVÉ / CALCULÉ]
+D046	R9 : frais d'aéroport = 59 370 $, écart −0,50 $	[LITIGE]
+D047	R10 : frais d'aéroport = 61 653 $, écart +0,50 $	[LITIGE]
+D048	ULR PNQ : configuration 196/52/2/17	[OBSERVÉ]
+D049	ULR PNQ : charge calculée = 43,40 t	[CALCULÉ]
+D050	ULR PNQ : CA billetterie = 1 035 910 $	[OBSERVÉ / CONFIRMÉ]
+D051	ULR PNQ : revenus auxiliaires = 357 330 $	[OBSERVÉ]
+D052	ULR PNQ : kérosène = 78 344 $	[OBSERVÉ]
+D053	ULR PNQ : résultat = 1 271 939 $	[OBSERVÉ]
+D054	XWB/ULR PNQ : différence de kérosène = 7 401 $	[CALCULÉ]
+D055	XWB/ULR PNQ : différence d'auxiliaires = 27 458 $	[CALCULÉ]
+D056	La configuration ULR fournit une première variation de charge utile pour tester le carburant	[OBSERVÉ / À TESTER]
+D057	La formule externe 0,1875 × distance × consommation × charge reproduit PNQ ULR à ~0,60 $ près	[HYPOTHÈSE EXTERNE — RENFORCÉE]
+D058	Les masses individuelles sont cohérentes sur plusieurs appareils	[CONFIRMÉ]
+D059	1 business + 1 première = 0,28 t affiché	[OBSERVÉ]
+D060	1 business + 1 éco = 0,22 t affiché	[OBSERVÉ]
+D061	1 éco + 1 première = 0,25 t affiché	[OBSERVÉ]
+D062	1 éco + 1 business + 1 première = 0,38 t affiché	[OBSERVÉ]
+D063	La formule 0,100 / 0,125 / 0,150 / 1,000 reproduit les configurations mixtes testées	[CONFIRMÉ]
+D064	L'affichage de masse semble conserver une précision interne supérieure au centième	[HYPOTHÈSE]
+D065	XWB 47,50 t vs ULR 43,40 t fournit une première variation de charge pour le test carburant	[CONFIRMÉ — observation expérimentale]
+
+───
+
+15. Historique des modifications du carnet
+Version 0.1
+
+Création de la base.
+
+Ajout des bonus Services.
+
+Ajout des bonus Employées.
+
+Ajout des premiers bonus Agenda calculés.
+
+Ajout de l'A350-900XWB.
+
+Ajout des routes R1 et R2.
+
+Ajout des résultats financiers.
+
+Première séparation entre valeurs observées et relations déduites.
+
+Première identification du facteur avion et de la composante distance pour les revenus auxiliaires.
+
+Version 0.2
+
+Ajout de la route R3 — CGK → POM.
+
+Ajout des horaires complets des rotations R1, R2 et R3.
+
+Ajout des cycles observés : R1 = 10h15, R2 = 12h00, R3 = 12h00.
+
+Ajout de la vérification de la durée de vol par rapport à la vitesse de l'A350.
+
+Ajout de la formule candidate de durée.
+
+Vérification de cette formule sur R1, R2 et R3.
+
+Identification de l'importance de l'ordre des opérations : multiplication par 2 avant l'arrondi.
+
+Ajout des temps fixes observés entre les différentes étapes de la rotation.
+
+Ajout de R3 aux vérifications du CA billetterie, CA total, coûts et résultat.
+
+Confirmation que l'écart de +1,50 $ sur les frais d'aéroport apparaît sur R2 et R3.
+
+Renforcement de l'hypothèse d'une dépendance du coût carburant à la distance.
+
+Ajout explicite de la consommation de l'appareil comme variable du modèle carburant.
+
+Ajout de l'évolution des revenus auxiliaires entre R1, R3 et R2.
+
+Version 0.3
+
+Ajout des routes R4 à R8.
+
+Passage de 3 à 8 routes de référence pour l'A350-900XWB.
+
+Confirmation de la relation 475 × 2 = 950 sur huit routes.
+
+Confirmation du CA billetterie, CA total, coûts totaux et résultat sur huit routes.
+
+Vérification de la formule de durée sur huit routes.
+
+Passage du statut de la formule de durée à [CONFIRMÉ — A350-900XWB].
+
+Ajout des coûts carburant R4 à R8.
+
+Renforcement de l'observation d'une relation très stable entre distance et coût carburant.
+
+Ajout des revenus auxiliaires R4 à R8.
+
+Mise en évidence du fait que les revenus auxiliaires ne suivent pas une simple fonction monotone de la distance.
+
+Ajout du test de masse réalisé depuis un XWB vide.
+
+Confirmation initiale des masses unitaires éco, business, première et cargo.
+
+Correction de la donnée première : 113 × 0,150 = 16,95 t.
+
+Ajout de la structure expérimentale des 5 vagues.
+
+Ajout du total expérimental de 35 avions.
+
+Ajout de l'observation des quatre CA XWB identiques sur IMF.
+
+Ajout de la première observation comparative XWB/ULR sur IMF.
+
+Mise à jour du litige des frais d'aéroport.
+
+Abandon de l'idée simplifiée d'un décalage constant de +0,5 $ sur les taxes.
+
+Conservation de l'hypothèse d'une précision interne ou d'un traitement intermédiaire des taxes.
+
+Maintien volontaire de la formule carburant externe hors des conclusions du carnet.
+
+Version 0.4
+
+Ajout des routes R9 — CGK → MZI et R10 — CGK → BKO.
+
+Passage du circuit XWB complet à 10 routes de référence.
+
+Vérification de la formule de durée sur R9 et R10.
+
+Confirmation de la formule de durée sur 10/10 routes XWB.
+
+Ajout des coûts carburant R9 et R10.
+
+Renforcement de la relation observée ~18,97 $/km sur des distances allant jusqu'à 12 823 km.
+
+Ajout des frais d'aéroport R9 et R10.
+
+Nouvelle évolution du litige des frais d'aéroport avec apparition d'un écart négatif de −0,50 $ sur R9.
+
+Ajout de l'A350-900ULR avec ses caractéristiques complètes.
+
+Ajout de la configuration ULR 196 éco / 52 business / 2 première / 17 cargo.
+
+Calcul de sa charge utile expérimentale : 43,40 t.
+
+Ajout du premier résultat financier réel ULR exploitable sur CGK → PNQ.
+
+Confirmation du CA billetterie ULR pour cette configuration.
+
+Première comparaison directe XWB / ULR sur une même route.
+
+Observation d'une différence de 7 401 $ sur le coût carburant entre XWB et ULR sur PNQ.
+
+Observation d'une différence de 27 458 $ sur les revenus auxiliaires entre XWB et ULR sur PNQ.
+
+Renforcement de l'hypothèse selon laquelle la charge/configuration intervient dans le coût carburant.
+
+Première vérification expérimentale de la formule carburant externe sur une charge différente.
+
+La formule externe reproduit le coût ULR PNQ avec un écart d'environ 0,60 $.
+
+La formule externe reste volontairement classée comme hypothèse.
+
+Mise à jour du test de durée : l'ULR possède également une vitesse de 911 km/h.
+
+L'incident sur la ligne IMF ULR conduit à conserver uniquement la prévision « Journée type ».
+
+Version 0.5
+
+Mise à jour des masses et des configurations mixtes.
+
+Confirmation des masses individuelles sur plusieurs appareils :
+
+éco = 0,100 t ;
+business = 0,125 t ;
+première = 0,150 t ;
+cargo = 1,000 t.
+
+Ajout de quatre tests de configurations mixtes :
+
+1 business + 1 première = 0,28 t affiché ;
+1 business + 1 éco = 0,22 t affiché ;
+1 éco + 1 première = 0,25 t affiché ;
+1 éco + 1 business + 1 première = 0,38 t affiché.
+
+Confirmation que les coefficients individuels reproduisent ces quatre observations avec une précision cohérente avec l'affichage au centième de tonne.
+
+Passage du statut des masses individuelles de [OBSERVÉ] à [CONFIRMÉ].
+
+Passage de la formule de masse :
+
+Masse =
+0,100 × éco
++ 0,125 × business
++ 0,150 × première
++ 1,000 × cargo
+
+à [CONFIRMÉ pour les configurations testées].
+
+Séparation explicite entre :
+
+la masse calculée d'une configuration ;
+la masse affichée par le jeu ;
+l'utilisation éventuelle de cette masse par le moteur carburant.
+
+Ajout d'un point de test spécifique concernant le mécanisme d'arrondi/précision interne de la masse affichée.
+
+Confirmation que la configuration ULR 196/52/2/17 correspond à une charge calculée de 43,40 t.
+
+Renforcement de la comparaison expérimentale XWB 47,50 t / ULR 43,40 t pour les futurs tests du modèle carburant.
