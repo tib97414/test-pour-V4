@@ -1,0 +1,630 @@
+Services :
+1. PAX
+- Distraction : + 400
+- Attractivité des tarifs : 0
+- Ponctualité : + 250
+- Sécurité : 0
+- Confort : + 70
+- Revenus auxiliaires : + 540
+- Frais : (-) 235
+- Demande passager : 0
+2. CARGO
+- Livraison Cargo : + 160
+- Attractivité de l'offre : + 160
+
+Employées :
+1. PAX
+- Distraction : + 500
+- Attractivité des tarifs : + 500
+- Ponctualité : + 500
+- Sécurité : + 500
+- Confort : + 500
+- Revenus auxiliaires : + 500
+- Frais : (-) 250
+- Demande passager : + 5%
+2. CARGO
+- Livraison Cargo : + 500
+- Attractivité de l'offre : + 500
+
+Bonus Agenda :
+1. PAX
+- Distraction : ?
+- Attractivité des tarifs : ?
+- Ponctualité : ?
+- Sécurité : ?
+- Confort : ?
+- Revenus auxiliaires : ?
+- Frais : ?
+- Demande passager : ?
+2. CARGO
+- Livraison Cargo : ?
+- Attractivité de l'offre : ?
+
+Bonus total ( Services + Employées + Agenda ) :
+1. PAX
+- Distraction : + 931
+- Attractivité des tarifs : + 559
+- Ponctualité : + 780
+- Sécurité : + 537
+- Confort : + 570
+- Revenus auxiliaires : + 1000 (Max possible perte de 40 points)
+- Frais : (-) 485
+- Demande passager : + 5%
+2. CARGO
+- Livraison Cargo : + 700
+- Attractivité de l'offre : + 700
+
+
+Avions :
+1. A350-900XWB
+- Catégorie 7
+- Rayon d'action : 16 780 km
+- Vitesse : 911 km/h
+- Consommation : 2,13 L/pax/100km
+- Sièges : 475
+- Sièges en full eco : 475
+- Sièges en full business : 263
+- Sièges en full première : 113
+- Cargo transportable si aucun siège : 48
+- Charges utiles : 48t
+- Charges utiles avec full eco : 47,50t / 48t
+- Charges utiles avec full business : 32,88t / 48t
+- Charges utiles avec full première : 16,95t / 48t
+- Charges utiles avec full cargo : 48t / 48t
+
+
+Routes :
+1. (CGK) -> IMF
+- Catégorie 7
+- Distance depuis CGK : 3702 km
+- Taxes : 10 576 $
+- Tarifs billet classe eco : 1293 $
+- Tarifs billet classe business : 1719 $
+- Tarifs billet classe première : 2973 $
+- Tarifs billet cargo : 4821 $
+- Demande classe eco : 5026
+- Demande classe business : 219
+- Demande classe première : 33
+- Demande cargo : 525
+
+
+Résultats R1 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 475 sièges eco configurer
+- 950 sièges visibles dans résultats ( 2 calculs possibles ) -> (A. 1 aller + 1 retour ou B. 1 aller-retour compter contant).
+
+2.Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 00h00 le 13/04
+- Décollage : 00h20 le 13/04
+- Débarquement : 04h23 le 13/04
+- Préparation du retour : 04h43 le 13/04
+
+3. Retour -> IMF - Imphal
+- Status :
+- Embarquement : 5h23 le 13/04
+- Décollage : 05h43 le 13/04
+- Débarquement : 9h47 le 13/04
+- Avion disponible : 10h15 le 13/04
+
+4. Résultats Routes 1 :
+- Chiffres d'affaires : 1564 149 $
+- Dont chiffres d'affaires billetterie : 1 228 350 $
+- Dont revenus auxiliaires : 335 799 $
+- Coût vols : - 107 244 $
+- Dont frais de kérosène : - 70 228 $
+- Dont frais d'aéroport : - 37 016 $ ( taxes × categorie avion / 2) -> (10 576 × 7 = 74302 ÷ 2 = 37 016$).
+- Dont autres charges : 0 $ (bonus next gen actif)
+
+- Résultats du vol : 1 456 905 $
+
+
+Routes :
+1. (CGK) -> PNQ
+- Catégorie 7
+- Distance depuis CGK : 4520 km
+- Taxes : 12 273 $
+- Tarifs billet classe eco : 1552 $
+- Tarifs billet classe business : 2064 $
+- Tarifs billet classe première : 3569 $
+- Tarifs billet cargo : 5841 $
+- Demande classe eco : 5086
+- Demande classe business : 228
+- Demande classe première : 34
+- Demande cargo : 590
+
+Résultats R2 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 475 sièges eco configurer
+- 950 sièges visibles dans résultats
+
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 10h15 le 13/04
+- Décollage : 10h35 le 13/04
+- Débarquement : 15h32 le 13/04
+- Préparation du retour : 15h52 le 13/04
+
+3. Retour -> PNQ - Pune
+- Status :
+- Embarquement : 16h32 le 13/04
+- Décollage : 16h52 le 13/04
+- Débarquement : 21h50 le 13/04
+- Avion disponible : 22h15 le 13/04
+
+4. Résultats Routes 2 :
+- Chiffres d'affaires : 1 804 272 $
+- Dont chiffres d'affaires billetterie : 1 474 400 $
+- Dont revenus auxiliaires : 329 872 $
+- Coût vols : - 128 702 $
+- Dont frais de kérosène : - 85 745 $
+- Dont frais d'aéroport : - 42 957 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 1 675 570 $
+
+
+
+Routes :
+1. (CGK) -> POM
+- Catégorie 7
+- Distance depuis CGK : 4482 km
+- Taxes : 11 803 $
+- Tarifs billet classe eco : 1540 $
+- Tarifs billet classe business : 2048 $
+- Tarifs billet classe première : 3541 $
+- Tarifs billet cargo : 5794 $
+- Demande classe eco : 5703
+- Demande classe business : 221
+- Demande classe première : 29
+- Demande cargo : 561
+
+Résultats R3 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 475 sièges eco configurer
+- 950 sièges visibles dans résultats
+
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 22h15 le 13/04
+- Décollage : 22h35 le 13/04
+- Débarquement : 03h30 le 14/04
+- Préparation du retour : 03h50 le 14/04
+
+3. Retour -> POM - Port Moresby
+- Status :
+- Embarquement : 04h30 le 14/04
+- Décollage : 04h50 le 14/04
+- Débarquement : 09h45 le 14/04
+- Avion disponible : 10h15 le 14/04
+
+4. Résultats Routes 3 :
+- Chiffres d'affaires : 1 793 455 $
+- Dont chiffres d'affaires billetterie : 1 463 000 $
+- Dont revenus auxiliaires : 330 455 $
+- Coût vols : - 126 336 $
+- Dont frais de kérosène : - 85 024 $
+- Dont frais d'aéroport : - 41 312 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 1 667 119 $
+
+
+Routes :
+1. (CGK) -> IXC
+- Catégorie 7
+- Distance depuis CGK : 5182 km
+- Taxes : 11 690 $
+- Tarifs billet classe eco : 1762 $
+- Tarifs billet classe business : 2343 $
+- Tarifs billet classe première : 4052 $
+- Tarifs billet cargo : 6046 $
+- Demande classe eco : 4608
+- Demande classe business : 201
+- Demande classe première : 30
+- Demande cargo : 529
+
+Résultats R4 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 475 sièges eco configurer
+- 950 sièges visibles dans résultats
+
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 10h15 le 14/04
+- Décollage : 10h35 le 14/04
+- Débarquement : 16h16 le 14/04
+- Préparation du retour : 16h36 le 14/04
+
+3. Retour -> IXC - Chandigarh
+- Status :
+- Embarquement : 17h16 le 14/04
+- Décollage : 17h36 le 14/04
+- Débarquement : 23h17 le 14/04
+- Avion disponible : 23h45 le 14/04
+
+4. Résultats Routes 4 :
+- Chiffres d'affaires : 2 018 536 $
+- Dont chiffres d'affaires billetterie : 1 673 900 $
+- Dont revenus auxiliaires : 344 636 $
+- Coût vols : - 139 221 $
+- Dont frais de kérosène : - 98 304 $
+- Dont frais d'aéroport : - 40 917 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 1 879 315 $
+
+
+Routes :
+1. (CGK) -> BHJ
+- Catégorie 7
+- Distance depuis CGK : 5180 km
+- Taxes : 11 798 $
+- Tarifs billet classe eco : 1762 $
+- Tarifs billet classe business : 2343 $
+- Tarifs billet classe première : 4052 $
+- Tarifs billet cargo : 6044 $
+- Demande classe eco : 5111
+- Demande classe business : 229
+- Demande classe première : 35
+- Demande cargo : 594
+
+Résultats R5 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 475 sièges eco configurer
+- 950 sièges visibles dans résultats
+
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 23h45 le 14/04
+- Décollage : 00h05 le 15/04
+- Débarquement : 05h46 le 15/04
+- Préparation du retour : 06h06 le 15/04
+
+3. Retour -> BHJ - Bhuj
+- Status :
+- Embarquement : 06h46 le 15/04
+- Décollage : 07h06 le 15/04
+- Débarquement : 12h47 le 15/04
+- Avion disponible : 13h15 le 15/04
+
+4. Résultats Routes 5 :
+- Chiffres d'affaires : 2 018 566 $
+- Dont chiffres d'affaires billetterie : 1 673 900 $
+- Dont revenus auxiliaires : 344 666 $
+- Coût vols : - 139 562 $
+- Dont frais de kérosène : - 98 266 $
+- Dont frais d'aéroport : - 41 296 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 1 879 004 $
+
+
+Routes :
+1. (CGK) -> SKZ
+- Catégorie 7
+- Distance depuis CGK : 5541 km
+- Taxes : 11 957 $
+- Tarifs billet classe eco : 1876 $
+- Tarifs billet classe business : 2495 $
+- Tarifs billet classe première : 4314 $
+- Tarifs billet cargo : 6451 $
+- Demande classe eco : 4374
+- Demande classe business : 165
+- Demande classe première : 22
+- Demande cargo : 474
+
+Résultats R6 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 475 sièges eco configurer
+- 950 sièges visibles dans résultats
+
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 13h15 le 15/04
+- Décollage : 13h35 le 15/04
+- Débarquement : 19h39 le 15/04
+- Préparation du retour : 19h59 le 15/04
+
+3. Retour -> SKZ - Sukkur
+- Status :
+- Embarquement : 20h39 le 15/04
+- Décollage : 20h59 le 15/04
+- Débarquement : 03h04 le 16/04
+- Avion disponible : 03h30 le 16/04
+
+4. Résultats Routes 6 :
+- Chiffres d'affaires : 2 133 788 $
+- Dont chiffres d'affaires billetterie : 1 782 200 $
+- Dont revenus auxiliaires : 351 588 $
+- Coût vols : - 146 965 $
+- Dont frais de kérosène : - 105 114 $
+- Dont frais d'aéroport : - 41 851 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 1 986 823 $
+
+
+Routes :
+1. (CGK) -> PEW
+- Catégorie 7
+- Distance depuis CGK : 5793 km
+- Taxes : 12 247 $
+- Tarifs billet classe eco : 1956 $
+- Tarifs billet classe business : 2601 $
+- Tarifs billet classe première : 4498 $
+- Tarifs billet cargo : 6735 $
+- Demande classe eco : 4935
+- Demande classe business : 190
+- Demande classe première : 23
+- Demande cargo : 541
+
+Résultats R7 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 475 sièges eco configurer
+- 950 sièges visibles dans résultats
+
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 03h30 le 16/04
+- Décollage : 03h50 le 16/04
+- Débarquement : 10h11 le 16/04
+- Préparation du retour : 10h31 le 16/04
+
+3. Retour -> PEW - Peshawar
+- Status :
+- Embarquement : 11h11 le 16/04
+- Décollage : 11h31 le 16/04
+- Débarquement : 17h53 le 16/04
+- Avion disponible : 18h15 le 16/04
+
+4. Résultats Routes 7 :
+- Chiffres d'affaires : 2 214 229 $
+- Dont chiffres d'affaires billetterie : 1 858 200 $
+- Dont revenus auxiliaires : 356 029 $
+- Coût vols : - 152 760 $
+- Dont frais de kérosène : - 109 895 $
+- Dont frais d'aéroport : - 42 865 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 2 061 469 $
+
+
+Routes :
+1. (CGK) -> DIR
+- Catégorie 7
+- Distance depuis CGK : 7391 km
+- Taxes : 13 371 $
+- Tarifs billet classe eco : 2462 $
+- Tarifs billet classe business : 3274 $
+- Tarifs billet classe première : 5662 $
+- Tarifs billet cargo : 8538 $
+- Demande classe eco : 5145
+- Demande classe business : 114
+- Demande classe première : 7
+- Demande cargo : 473
+
+Résultats R8 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 475 sièges eco configurer
+- 950 sièges visibles dans résultats
+
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 18h15 le 16/04
+- Décollage : 18h35 le 16/04
+- Débarquement : 02h41 le 17/04
+- Préparation du retour : 03h01 le 17/04
+
+3. Retour -> DIR - Dire Dawa
+- Status :
+- Embarquement : 03h41 le 17/04
+- Décollage : 04h01 le 17/04
+- Débarquement : 12h08 le 17/04
+- Avion disponible : 12h30 le 17/04
+
+4. Résultats Routes 8 :
+- Chiffres d'affaires : 2 728 560 $
+- Dont chiffres d'affaires billetterie : 2 338 900 $
+- Dont revenus auxiliaires : 389 660 $
+- Coût vols : - 187 008 $
+- Dont frais de kérosène : - 140 209 $
+- Dont frais d'aéroport : - 46 799 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 2 541 552 $
+
+
+Routes :
+1. (CGK) -> MZI
+- Catégorie 7
+- Distance depuis CGK : 12 408 km
+- Taxes : 16 963 $
+- Tarifs billet classe eco : 4053 $
+- Tarifs billet classe business : 5390 $
+- Tarifs billet classe première : 9321 $
+- Tarifs billet cargo : 14 197 $
+- Demande classe eco : 5737
+- Demande classe business : 110
+- Demande classe première : 4
+- Demande cargo : 438
+
+Résultats R9 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 475 sièges eco configurer
+- 950 sièges visibles dans résultats
+
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 12h30 le 17/04
+- Décollage : 12h50 le 17/04
+- Débarquement : 02h27 le 18/04
+- Préparation du retour : 02h47 le 18/04
+
+3. Retour -> MZI - Mopti
+- Status :
+- Embarquement : 03h27 le 18/04
+- Décollage : 03h47 le 18/04
+- Débarquement : 17h24 le 18/04
+- Avion disponible : 17h45 le 18/04
+
+4. Résultats Routes 9 :
+- Chiffres d'affaires : 4 345 789 $
+- Dont chiffres d'affaires billetterie : 3 850 350 $
+- Dont revenus auxiliaires : 495 439 $
+- Coût vols : - 294 753 $
+- Dont frais de kérosène : - 235 383 $
+- Dont frais d'aéroport : - 59 370 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 4 051 036 $
+
+
+Routes :
+1. (CGK) -> BKO
+- Catégorie 7
+- Distance depuis CGK : 12 823 km
+- Taxes : 17 615 $
+- Tarifs billet classe eco : 4184 $
+- Tarifs billet classe business : 5564 $
+- Tarifs billet classe première : 9623 $
+- Tarifs billet cargo : 14 665 $
+- Demande classe eco : 6647
+- Demande classe business : 135
+- Demande classe première : 4
+- Demande cargo : 527
+
+Résultats R10 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 475 sièges eco configurer
+- 950 sièges visibles dans résultats
+
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 17h45 le 18/04
+- Décollage : 18h05 le 18/04
+- Débarquement : 08h09 le 19/04
+- Préparation du retour : 08h29 le 19/04
+
+3. Retour -> BKO - Bamako
+- Status :
+- Embarquement : 09h09 le 19/04
+- Décollage : 09h29 le 19/04
+- Débarquement : 23h34 le 19/04
+- Avion disponible : 00h00 le 20/04
+
+4. Résultats Routes 10 :
+- Chiffres d'affaires : 4 480 485 $
+- Dont chiffres d'affaires billetterie : 3 974 800 $
+- Dont revenus auxiliaires : 505 685 $
+- Coût vols : - 304 909 $
+- Dont frais de kérosène : - 243 256 $
+- Dont frais d'aéroport : - 61 653 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 4 175 576 $
+
+
+Avions :
+1. A350-900ULR
+- Catégorie 7
+- Rayon d'action : 18 000 km
+- Vitesse : 911 km/h
+- Consommation : 2,13 L/pax/100km
+- Sièges : 440
+- Sièges en full eco : 440
+- Sièges en full business : 244
+- Sièges en full première : 104
+- Cargo transportable si aucun siège : 44
+- Charges utiles : 44t
+- Charges utiles avec full eco : 44t / 44t
+- Charges utiles avec full business : 30,50t / 44t
+- Charges utiles avec full première : 15,60t / 44t
+- Charges utiles avec full cargo : 44t / 44t
+
+Routes :
+1. (CGK) -> IMF
+- Catégorie 7
+- Distance depuis CGK : 3702 km
+- Taxes : 10 576 $
+- Tarifs billet classe eco : 1293 $
+- Tarifs billet classe business : 1719 $
+- Tarifs billet classe première : 2973 $
+- Tarifs billet cargo : 4821 $
+- Demande classe eco : 5026
+- Demande classe business : 219
+- Demande classe première : 33
+- Demande cargo : 525
+
+
+Résultats R1 ( Avions + Routes ) :
+1. Configuration Avions : 
+-  196 sièges eco / 52 sièges business/ 2 sièges premières / 17 cargo.
+- 392 sièges eco / 104 sièges business/ 4 sièges premières / 34 cargo visibles dans résultats.
+2.Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 00h00 le 13/04
+- Décollage : 00h20 le 13/04
+- Débarquement : 04h23 le 13/04
+- Préparation du retour : 04h43 le 13/04
+
+3. Retour -> IMF - Imphal
+- Status :
+- Embarquement : 5h23 le 13/04
+- Décollage : 05h43 le 13/04
+- Débarquement : 9h47 le 13/04
+- Avion disponible : 10h15 le 13/04
+
+4. Résultats Routes 1 :
+- Chiffres d'affaires :  $
+- Dont chiffres d'affaires billetterie :  $
+- Dont revenus auxiliaires :  $
+- Coût vols : -  $
+- Dont frais de kérosène : -  $
+- Dont frais d'aéroport : -  $
+- Dont autres charges : 0 $
+
+- Résultats du vol :  $
+
+Routes :
+1. (CGK) -> PNQ
+- Catégorie 7
+- Distance depuis CGK : 4520 km
+- Taxes : 12 273 $
+- Tarifs billet classe eco : 1552 $
+- Tarifs billet classe business : 2064 $
+- Tarifs billet classe première : 3569 $
+- Tarifs billet cargo : 5841 $
+- Demande classe eco : 5086
+- Demande classe business : 228
+- Demande classe première : 34
+- Demande cargo : 590
+
+Résultats R2 ( Avions + Routes ) :
+1. Configuration Avions : 
+-  196 sièges eco / 52 sièges business/ 2 sièges premières / 17 cargo.
+- 392 sièges eco / 104 sièges business/ 4 sièges premières / 34 cargo visibles dans résultats.
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 10h15 le 13/04
+- Décollage : 10h35 le 13/04
+- Débarquement : 15h32 le 13/04
+- Préparation du retour : 15h52 le 13/04
+
+3. Retour -> PNQ - Pune
+- Status :
+- Embarquement : 16h32 le 13/04
+- Décollage : 16h52 le 13/04
+- Débarquement : 21h50 le 13/04
+- Avion disponible : 22h15 le 13/04
+
+4. Résultats Routes 2 :
+- Chiffres d'affaires : 1 393 240 $
+- Dont chiffres d'affaires billetterie : 1 035 910 $
+- Dont revenus auxiliaires : 357 330 $
+- Coût vols : - 121 301 $
+- Dont frais de kérosène : - 78 344 $
+- Dont frais d'aéroport : - 42 957 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 1 271 939 $
