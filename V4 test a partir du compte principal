@@ -673,3 +673,93 @@ Résultats R3 ( Avions + Routes ) :
 - Dont autres charges : 0 $
 
 - Résultats du vol : 1 266 332 $
+
+
+Routes :
+1. (CGK) -> IXC
+- Catégorie 7
+- Distance depuis CGK : 5182 km
+- Taxes : 11 690 $
+- Tarifs billet classe eco : 1762 $
+- Tarifs billet classe business : 2343 $
+- Tarifs billet classe première : 4052 $
+- Tarifs billet cargo : 6046 $
+- Demande classe eco : 4608
+- Demande classe business : 201
+- Demande classe première : 30
+- Demande cargo : 529
+
+Résultats R4 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 196 sièges eco / 52 sièges business/ 2 sièges premières / 17 cargo.
+- 392 sièges eco / 104 sièges business/ 4 sièges premières / 34 cargo visibles dans résultats.
+
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 10h15 le 14/04
+- Décollage : 10h35 le 14/04
+- Débarquement : 16h16 le 14/04
+- Préparation du retour : 16h36 le 14/04
+
+3. Retour -> IXC - Chandigarh
+- Status :
+- Embarquement : 17h16 le 14/04
+- Décollage : 17h36 le 14/04
+- Débarquement : 23h17 le 14/04
+- Avion disponible : 23h45 le 14/04
+
+4. Résultats Routes 4 :
+- Chiffres d'affaires : 1 541 071 $
+- Dont chiffres d'affaires billetterie : 1 156 148 $
+- Dont revenus auxiliaires : 384 923 $
+- Coût vols : - 130 735 $
+- Dont frais de kérosène : - 89 818 $
+- Dont frais d'aéroport : - 40 917 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 1 410 336 $
+
+
+Routes :
+1. (CGK) -> BHJ
+- Catégorie 7
+- Distance depuis CGK : 5180 km
+- Taxes : 11 798 $
+- Tarifs billet classe eco : 1762 $
+- Tarifs billet classe business : 2343 $
+- Tarifs billet classe première : 4052 $
+- Tarifs billet cargo : 6044 $
+- Demande classe eco : 5111
+- Demande classe business : 229
+- Demande classe première : 35
+- Demande cargo : 594
+
+Résultats R5 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 196 sièges eco / 52 sièges business/ 2 sièges premières / 17 cargo.
+- 392 sièges eco / 104 sièges business/ 4 sièges premières / 34 cargo visibles dans résultats.
+
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 23h45 le 14/04
+- Décollage : 00h05 le 15/04
+- Débarquement : 05h46 le 15/04
+- Préparation du retour : 06h06 le 15/04
+
+3. Retour -> BHJ - Bhuj
+- Status :
+- Embarquement : 06h46 le 15/04
+- Décollage : 07h06 le 15/04
+- Débarquement : 12h47 le 15/04
+- Avion disponible : 13h15 le 15/04
+
+4. Résultats Routes 5 :
+- Chiffres d'affaires : 1 541 009 $
+- Dont chiffres d'affaires billetterie : 1 156 080 $
+- Dont revenus auxiliaires : 384 929 $
+- Coût vols : - 131 080 $
+- Dont frais de kérosène : - 89 784 $
+- Dont frais d'aéroport : - 41 296 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 1 409 929 $
