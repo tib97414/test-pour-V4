@@ -840,7 +840,66 @@ Influence exacte de la masse :
 
 [À TESTER]
 
-9.4 Formule externe trouvée par des joueurs
+9.4 Test expérimental : variation de 1 tonne de charge utile
+
+Deux tests ont été réalisés sur l'A350-900ULR avec une réduction exacte de 1,00 t de charge utile.
+
+Test cargo — CGK → IXC, 5 182 km
+
+Avant : 196 éco / 52 business / 2 première / 17 cargo
+Charge : 43,40 t
+Kérosène : 89 818 $
+
+Après : 196 éco / 52 business / 2 première / 16 cargo
+Charge : 42,40 t
+Kérosène : 87 749 $
+
+Variation observée : −1,00 t et −2 069 $ de kérosène.
+
+Calcul attendu :
+0,1875 × 5 182 × 2,13 × 1,00
+= 2 069,40 $
+
+Écart : 0,40 $.
+
+Statut : [CONFIRMÉ — variation de 1,00 t de cargo sur ULR]
+
+Test PAX éco — CGK → BHJ, 5 180 km
+
+Avant : 196 éco / 52 business / 2 première / 17 cargo
+Charge : 43,40 t
+Kérosène : 89 784 $
+
+Après : 186 éco / 52 business / 2 première / 17 cargo
+Charge : 42,40 t
+Kérosène : 87 715 $
+
+Variation observée : −1,00 t et −2 069 $ de kérosène.
+
+Calcul attendu :
+0,1875 × 5 180 × 2,13 × 1,00
+= 2 068,60 $
+
+Écart : 0,40 $.
+
+Statut : [CONFIRMÉ — variation de 1,00 t de PAX éco sur ULR]
+
+Conclusion expérimentale
+
+−1 cargo = −1,00 t
+−10 PAX éco = −1,00 t
+
+Les deux variations produisent exactement la même variation observée de carburant : −2 069 $.
+
+L'observation renforce fortement l'utilisation de la masse de charge utile dans le calcul carburant plutôt qu'un simple comptage des passagers ou du cargo.
+
+Cette confirmation reste limitée expérimentalement à l'A350-900ULR, à 2,13 de consommation et aux configurations testées.
+
+Statut : [CONFIRMÉ — deux masses / deux routes, ULR 2,13]
+
+───
+
+9.5 Formule externe trouvée par des joueurs
 
 Formule :
 
@@ -895,6 +954,34 @@ fonction(
 )
 
 Statut : [HYPOTHÈSE]
+
+10.2 Effet d'une variation de configuration à masse identique
+
+Les deux tests de variation de charge utile montrent un comportement différent des revenus auxiliaires malgré une variation de masse identique.
+
+Test cargo — CGK → IXC
+17 cargo → 16 cargo
+
+Kérosène : 89 818 $ → 87 749 $
+Auxiliaires : 384 923 $ → 386 041 $
+Variation auxiliaires : +1 118 $
+
+Test PAX éco — CGK → BHJ
+196 éco → 186 éco
+
+Kérosène : 89 784 $ → 87 715 $
+Auxiliaires : 384 929 $ → 383 248 $
+Variation auxiliaires : −1 681 $
+
+Dans les deux tests, la charge utile diminue exactement de 1,00 t et le carburant diminue de 2 069 $.
+Pourtant, les revenus auxiliaires évoluent dans des directions opposées.
+
+Conclusion : la seule variation de masse ne suffit pas à expliquer la variation des revenus auxiliaires observée ici.
+Les résultats sont compatibles avec une dépendance à la composition de la configuration et/ou aux catégories transportées, mais la formule exacte reste à déterminer.
+
+Statut : [OBSERVÉ — mécanisme à déterminer]
+
+───
 
 10.1 Comparaison XWB / ULR sur PNQ
 
@@ -1130,7 +1217,7 @@ Même distance + différentes catégories.
 → À TESTER
 
 Même route + même avion + configurations différentes.
-→ À TESTER
+→ RÉALISÉ PARTIELLEMENT — −1 cargo sur IXC ; −10 éco sur BHJ
 
 Vérifier si le facteur avion reste constant.
 
@@ -1149,10 +1236,10 @@ Même route XWB/ULR.
 → Réalisé sur 10/10 routes
 
 Différentes masses utiles.
-→ PREMIÈRE VARIATION OBSERVÉE : 47,50 t / 43,40 t
+→ RÉALISÉ — −1,00 t cargo et −1,00 t PAX éco sur ULR
 
 Différentes configurations.
-→ À TESTER
+→ RÉALISÉ PARTIELLEMENT — deux configurations à −1,00 t ; effet carburant confirmé, effet auxiliaire à déterminer
 
 Différentes consommations.
 → À TESTER
@@ -1305,6 +1392,12 @@ D066	La formule 0,1875 × distance × consommation × charge reproduit R1 à R10
 D067	Les revenus auxiliaires ULR sont supérieurs aux revenus XWB sur les 10 routes comparables	[OBSERVÉ]
 D068	La formule de durée reproduit 20 observations sur 20 à 911 km/h	[CONFIRMÉ — 10 XWB + 10 ULR]
 D069	La comparaison XWB/ULR est complète sur les 10 routes	[CONFIRMÉ]
+D070	−1 cargo sur ULR = −1,00 t et −2 069 $ de kérosène sur IXC	[CONFIRMÉ]
+D071	−10 PAX éco sur ULR = −1,00 t et −2 069 $ de kérosène sur BHJ	[CONFIRMÉ]
+D072	Deux réductions de 1,00 t produisent la même variation carburant sur deux routes ULR	[CONFIRMÉ — deux masses / deux routes]
+D073	−1 cargo augmente les revenus auxiliaires de 1 118 $	[OBSERVÉ]
+D074	−10 PAX éco diminue les revenus auxiliaires de 1 681 $	[OBSERVÉ]
+D075	À masse retirée identique, les revenus auxiliaires évoluent dans des directions opposées selon la catégorie retirée	[OBSERVÉ / À TESTER]
 
 ───
 
@@ -1490,6 +1583,18 @@ Ajout d'un point de test spécifique concernant le mécanisme d'arrondi/précisi
 Confirmation que la configuration ULR 196/52/2/17 correspond à une charge calculée de 43,40 t.
 
 Renforcement de la comparaison expérimentale XWB 47,50 t / ULR 43,40 t pour les futurs tests du modèle carburant.
+
+Version 0.7
+
+Ajout des deux tests expérimentaux de variation de charge utile sur l'A350-900ULR : −1 cargo et −10 PAX éco.
+
+Confirmation expérimentale de la relation carburant pour une variation de −1,00 t sur deux routes et deux catégories de charge différentes : −2 069 $ observés dans les deux cas.
+
+Renforcement du statut de la formule carburant : confirmation sur plusieurs masses et plusieurs routes ULR, sans généralisation à d'autres avions ou consommations.
+
+Ajout de l'observation inattendue sur les revenus auxiliaires : −1 cargo augmente les auxiliaires de 1 118 $, tandis que −10 PAX éco les diminue de 1 681 $.
+
+Séparation explicite entre l'effet de la masse sur le carburant et l'effet de la composition de la configuration sur les revenus auxiliaires.
 
 Version 0.6
 
