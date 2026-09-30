@@ -423,7 +423,35 @@ R8 — CGK → DIR
 R9 — CGK → MZI
 R10 — CGK → BKO
 
-Les données détaillées des dix routes restent celles de la version précédente du carnet.
+Les données détaillées des dix routes sont désormais conservées comme série de référence reproductible.
+
+### Série XWB — R1 à R10
+
+R1 CGK→IMF — 3 702 km — carburant 70 228 $ — aéroport 37 016 $ — auxiliaires 335 799 $ — CA 1 564 149 $ — résultat 1 456 905 $
+R2 CGK→PNQ — 4 520 km — carburant 85 745 $ — aéroport 42 957 $ — auxiliaires 329 872 $ — CA 1 804 272 $ — résultat 1 675 570 $
+R3 CGK→POM — 4 482 km — carburant 85 024 $ — aéroport 41 312 $ — auxiliaires 330 455 $ — CA 1 793 455 $ — résultat 1 667 119 $
+R4 CGK→IXC — 5 182 km — carburant 98 304 $ — aéroport 40 917 $ — auxiliaires 344 636 $ — CA 2 018 536 $ — résultat 1 879 315 $
+R5 CGK→BHJ — 5 180 km — carburant 98 266 $ — aéroport 41 296 $ — auxiliaires 344 666 $ — CA 2 018 566 $ — résultat 1 879 004 $
+R6 CGK→SKZ — 5 541 km — carburant 105 114 $ — aéroport 41 851 $ — auxiliaires 351 588 $ — CA 2 133 788 $ — résultat 1 986 823 $
+R7 CGK→PEW — 5 793 km — carburant 109 895 $ — aéroport 42 865 $ — auxiliaires 356 029 $ — CA 2 214 229 $ — résultat 2 061 469 $
+R8 CGK→DIR — 7 391 km — carburant 140 209 $ — aéroport 46 799 $ — auxiliaires 389 660 $ — CA 2 728 560 $ — résultat 2 541 552 $
+R9 CGK→MZI — 12 408 km — carburant 235 383 $ — aéroport 59 370 $ — auxiliaires 495 439 $ — CA 4 345 789 $ — résultat 4 051 036 $
+R10 CGK→BKO — 12 823 km — carburant 243 256 $ — aéroport 61 653 $ — auxiliaires 505 685 $ — CA 4 480 485 $ — résultat 4 175 576 $
+
+### Série ULR — R1 à R10
+
+Configuration : 196 éco / 52 business / 2 première / 17 cargo — 43,40 t calculées.
+
+R1 CGK→IMF — 3 702 km — carburant 64 166 $ — aéroport 37 016 $ — auxiliaires 348 657 $ — CA 1 210 095 $ — résultat 1 108 913 $
+R2 CGK→PNQ — 4 520 km — carburant 78 344 $ — aéroport 42 957 $ — auxiliaires 357 330 $ — CA 1 393 240 $ — résultat 1 271 939 $
+R3 CGK→POM — 4 482 km — carburant 77 685 $ — aéroport 41 312 $ — auxiliaires 357 497 $ — CA 1 385 329 $ — résultat 1 266 332 $
+R4 CGK→IXC — 5 182 km — carburant 89 818 $ — aéroport 40 917 $ — auxiliaires 384 923 $ — CA 1 541 071 $ — résultat 1 410 336 $
+R5 CGK→BHJ — 5 180 km — carburant 89 784 $ — aéroport 41 296 $ — auxiliaires 384 929 $ — CA 1 541 009 $ — résultat 1 409 929 $
+R6 CGK→SKZ — 5 541 km — carburant 96 041 $ — aéroport 41 851 $ — auxiliaires 396 963 $ — CA 1 628 425 $ — résultat 1 490 533 $
+R7 CGK→PEW — 5 793 km — carburant 100 409 $ — aéroport 42 865 $ — auxiliaires 404 944 $ — CA 1 689 182 $ — résultat 1 545 908 $
+R8 CGK→DIR — 7 391 km — carburant 128 107 $ — aéroport 46 799 $ — auxiliaires 461 421 $ — CA 2 079 961 $ — résultat 1 905 055 $
+R9 CGK→MZI — 12 408 km — carburant 215 066 $ — aéroport 59 370 $ — auxiliaires 638 950 $ — CA 3 308 268 $ — résultat 3 033 832 $
+R10 CGK→BKO — 12 823 km — carburant 222 259 $ — aéroport 61 653 $ — auxiliaires 655 244 $ — CA 3 411 130 $ — résultat 3 127 218 $
 
 Statut : [OBSERVÉ]
 
@@ -749,7 +777,19 @@ fonction(
 
 Statut : [HYPOTHÈSE FORTE]
 
-9.2 Comparaison carburant XWB / ULR
+9.2 Vérification de la formule carburant sur la série ULR
+
+Formule testée : 0,1875 × distance × consommation × charge utile en tonnes.
+
+Avec 43,40 t et 2,13 sur R1 à R10, le calcul reproduit les 10 coûts observés avec un écart absolu inférieur à 1 $ sur chaque route.
+
+Écarts calculés : R1 0,30 $ ; R2 0,60 $ ; R3 0,95 $ ; R4 0,96 $ ; R5 0,29 $ ; R6 0,46 $ ; R7 0,35 $ ; R8 0,28 $ ; R9 0,31 $ ; R10 0,46 $.
+
+Statut : [CONFIRMÉ — série ULR, configuration 43,40 t]
+
+Cette confirmation reste limitée à cette configuration. Elle ne généralise pas encore la formule à une autre masse, un autre avion ou une autre consommation.
+
+9.3 Comparaison carburant XWB / ULR
 
 Sur CGK → PNQ :
 
@@ -800,7 +840,7 @@ Influence exacte de la masse :
 
 [À TESTER]
 
-9.3 Formule externe trouvée par des joueurs
+9.4 Formule externe trouvée par des joueurs
 
 Formule :
 
@@ -923,9 +963,9 @@ ULR : 348 657 $
 
 12 858 $
 
-Statut : [OBSERVÉ / CALCULÉ — PRÉVISION]
+Statut : [OBSERVÉ / CALCULÉ — RÉSULTAT RÉEL]
 
-Attention : le résultat ULR IMF réel n'est pas retenu à cause de l'incident.
+Le résultat ULR IMF réel est désormais retenu. La billetterie précédemment saisie à 861 448 $ a été vérifiée et corrigée en 861 438 $.
 
 11.2 CGK → PNQ — résultat réel
 XWB
@@ -1070,7 +1110,7 @@ Tester la formule sur l'ensemble du circuit.
 → TERMINÉ — 10/10 XWB
 
 Tester avec l'A350-900ULR.
-→ PARTIELLEMENT TERMINÉ — même vitesse de 911 km/h
+→ TERMINÉ — 10/10 routes, même vitesse de 911 km/h
 
 Tester un appareil avec vitesse différente.
 → À TESTER
@@ -1095,7 +1135,7 @@ Même route + même avion + configurations différentes.
 Vérifier si le facteur avion reste constant.
 
 Comparer directement XWB et ULR sur les 10 routes.
-→ À POURSUIVRE — IMF ULR à refaire sans incident
+→ TERMINÉ — comparaison XWB/ULR sur les 10 routes
 
 Tests carburant
 
@@ -1103,10 +1143,10 @@ XWB full éco.
 → 10 routes disponibles
 
 ULR avec nouvelle configuration.
-→ PNQ disponible
+→ 10/10 routes disponibles
 
 Même route XWB/ULR.
-→ PNQ réalisé
+→ Réalisé sur 10/10 routes
 
 Différentes masses utiles.
 → PREMIÈRE VARIATION OBSERVÉE : 47,50 t / 43,40 t
@@ -1231,9 +1271,9 @@ D032	Les quatre vagues XWB ont des demandes restantes différentes mais le même
 D033	Circuit expérimental = 5 vagues × 7 avions = 35 avions	[OBSERVÉ]
 D034	Vagues 1–4 = 28 XWB identiques ; vague 5 = 7 ULR nouvelle configuration	[OBSERVÉ]
 D035	ULR IMF : 392 éco / 104 business / 4 première / 34 cargo	[OBSERVÉ]
-D036	ULR IMF : CA affiché = 1 210 095 $	[OBSERVÉ — prévision]
-D037	ULR IMF : CA auxiliaire calculé = 348 657 $	[CALCULÉ — prévision]
-D038	XWB IMF : CA auxiliaire = 335 799 $ ; ULR IMF = 348 657 $	[OBSERVÉ / CALCULÉ — prévision]
+D036	ULR IMF : CA affiché = 1 210 095 $	[OBSERVÉ]
+D037	ULR IMF : CA billetterie = 861 438 $ ; auxiliaire = 348 657 $	[CONFIRMÉ]
+D038	XWB IMF : CA auxiliaire = 335 799 $ ; ULR IMF = 348 657 $	[OBSERVÉ]
 D039	R9 CGK → MZI : cycle = 29h15	[OBSERVÉ]
 D040	R10 CGK → BKO : cycle = 30h15	[OBSERVÉ]
 D041	La formule de durée reproduit R9 et R10	[CONFIRMÉ — XWB]
@@ -1261,6 +1301,10 @@ D062	1 éco + 1 business + 1 première = 0,38 t affiché	[OBSERVÉ]
 D063	La formule 0,100 / 0,125 / 0,150 / 1,000 reproduit les configurations mixtes testées	[CONFIRMÉ]
 D064	L'affichage de masse semble conserver une précision interne supérieure au centième	[HYPOTHÈSE]
 D065	XWB 47,50 t vs ULR 43,40 t fournit une première variation de charge pour le test carburant	[CONFIRMÉ — observation expérimentale]
+D066	La formule 0,1875 × distance × consommation × charge reproduit R1 à R10 ULR à moins de 1 $	[CONFIRMÉ — configuration 43,40 t]
+D067	Les revenus auxiliaires ULR sont supérieurs aux revenus XWB sur les 10 routes comparables	[OBSERVÉ]
+D068	La formule de durée reproduit 20 observations sur 20 à 911 km/h	[CONFIRMÉ — 10 XWB + 10 ULR]
+D069	La comparaison XWB/ULR est complète sur les 10 routes	[CONFIRMÉ]
 
 ───
 
@@ -1402,6 +1446,24 @@ La formule externe reste volontairement classée comme hypothèse.
 Mise à jour du test de durée : l'ULR possède également une vitesse de 911 km/h.
 
 L'incident sur la ligne IMF ULR conduit à conserver uniquement la prévision « Journée type ».
+
+Version 0.6
+
+Ajout de la série complète ULR R1 à R10 avec la configuration 196 éco / 52 business / 2 première / 17 cargo.
+
+Correction et validation du résultat ULR R1 IMF : billetterie observée = 861 438 $.
+
+Ajout de la série financière complète XWB et ULR sur les dix routes de référence.
+
+Confirmation de la formule carburant 0,1875 × distance × consommation × charge sur les 10 routes ULR avec 43,40 t : écart inférieur à 1 $ sur chaque route.
+
+Passage de cette formule à [CONFIRMÉ — série ULR, configuration 43,40 t], sans généralisation aux autres configurations.
+
+Confirmation de la formule de durée sur 20 observations à 911 km/h : 10 XWB + 10 ULR. La généralisation à une vitesse différente reste à tester.
+
+Ajout de la comparaison XWB/ULR sur les 10 routes pour le carburant et les revenus auxiliaires.
+
+Mise à jour des tests : comparaison XWB/ULR 10/10 et vérification carburant ULR 10/10 terminées.
 
 Version 0.5
 
