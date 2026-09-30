@@ -1447,24 +1447,6 @@ Mise à jour du test de durée : l'ULR possède également une vitesse de 911 km
 
 L'incident sur la ligne IMF ULR conduit à conserver uniquement la prévision « Journée type ».
 
-Version 0.6
-
-Ajout de la série complète ULR R1 à R10 avec la configuration 196 éco / 52 business / 2 première / 17 cargo.
-
-Correction et validation du résultat ULR R1 IMF : billetterie observée = 861 438 $.
-
-Ajout de la série financière complète XWB et ULR sur les dix routes de référence.
-
-Confirmation de la formule carburant 0,1875 × distance × consommation × charge sur les 10 routes ULR avec 43,40 t : écart inférieur à 1 $ sur chaque route.
-
-Passage de cette formule à [CONFIRMÉ — série ULR, configuration 43,40 t], sans généralisation aux autres configurations.
-
-Confirmation de la formule de durée sur 20 observations à 911 km/h : 10 XWB + 10 ULR. La généralisation à une vitesse différente reste à tester.
-
-Ajout de la comparaison XWB/ULR sur les 10 routes pour le carburant et les revenus auxiliaires.
-
-Mise à jour des tests : comparaison XWB/ULR 10/10 et vérification carburant ULR 10/10 terminées.
-
 Version 0.5
 
 Mise à jour des masses et des configurations mixtes.
@@ -1508,3 +1490,21 @@ Ajout d'un point de test spécifique concernant le mécanisme d'arrondi/précisi
 Confirmation que la configuration ULR 196/52/2/17 correspond à une charge calculée de 43,40 t.
 
 Renforcement de la comparaison expérimentale XWB 47,50 t / ULR 43,40 t pour les futurs tests du modèle carburant.
+
+Version 0.6
+
+Ajout de la série complète ULR R1 à R10 avec la configuration 196 éco / 52 business / 2 première / 17 cargo.
+
+Correction et validation du résultat ULR R1 IMF : billetterie observée = 861 438 $.
+
+Ajout de la série financière complète XWB et ULR sur les dix routes de référence.
+
+Confirmation de la formule carburant 0,1875 × distance × consommation × charge sur les 10 routes ULR avec 43,40 t : écart inférieur à 1 $ sur chaque route.
+
+Passage de cette formule à [CONFIRMÉ — série ULR, configuration 43,40 t], sans généralisation aux autres configurations.
+
+Confirmation de la formule de durée sur 20 observations à 911 km/h : 10 XWB + 10 ULR. La généralisation à une vitesse différente reste à tester.
+
+Ajout de la comparaison XWB/ULR sur les 10 routes pour le carburant et les revenus auxiliaires.
+
+Mise à jour des tests : comparaison XWB/ULR 10/10 et vérification carburant ULR 10/10 terminées.
