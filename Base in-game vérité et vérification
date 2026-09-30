@@ -1584,18 +1584,6 @@ Confirmation que la configuration ULR 196/52/2/17 correspond à une charge calcu
 
 Renforcement de la comparaison expérimentale XWB 47,50 t / ULR 43,40 t pour les futurs tests du modèle carburant.
 
-Version 0.7
-
-Ajout des deux tests expérimentaux de variation de charge utile sur l'A350-900ULR : −1 cargo et −10 PAX éco.
-
-Confirmation expérimentale de la relation carburant pour une variation de −1,00 t sur deux routes et deux catégories de charge différentes : −2 069 $ observés dans les deux cas.
-
-Renforcement du statut de la formule carburant : confirmation sur plusieurs masses et plusieurs routes ULR, sans généralisation à d'autres avions ou consommations.
-
-Ajout de l'observation inattendue sur les revenus auxiliaires : −1 cargo augmente les auxiliaires de 1 118 $, tandis que −10 PAX éco les diminue de 1 681 $.
-
-Séparation explicite entre l'effet de la masse sur le carburant et l'effet de la composition de la configuration sur les revenus auxiliaires.
-
 Version 0.6
 
 Ajout de la série complète ULR R1 à R10 avec la configuration 196 éco / 52 business / 2 première / 17 cargo.
@@ -1613,3 +1601,15 @@ Confirmation de la formule de durée sur 20 observations à 911 km/h : 10 XWB + 
 Ajout de la comparaison XWB/ULR sur les 10 routes pour le carburant et les revenus auxiliaires.
 
 Mise à jour des tests : comparaison XWB/ULR 10/10 et vérification carburant ULR 10/10 terminées.
+
+Version 0.7
+
+Ajout des deux tests expérimentaux de variation de charge utile sur l'A350-900ULR : −1 cargo et −10 PAX éco.
+
+Confirmation expérimentale de la relation carburant pour une variation de −1,00 t sur deux routes et deux catégories de charge différentes : −2 069 $ observés dans les deux cas.
+
+Renforcement du statut de la formule carburant : confirmation sur plusieurs masses et plusieurs routes ULR, sans généralisation à d'autres avions ou consommations.
+
+Ajout de l'observation inattendue sur les revenus auxiliaires : −1 cargo augmente les auxiliaires de 1 118 $, tandis que −10 PAX éco les diminue de 1 681 $.
+
+Séparation explicite entre l'effet de la masse sur le carburant et l'effet de la composition de la configuration sur les revenus auxiliaires.
