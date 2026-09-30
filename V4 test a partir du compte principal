@@ -1072,15 +1072,15 @@ Résultats R4 ( Avions + Routes ) :
 - Avion disponible : 23h45 le 14/04
 
 4. Résultats Routes 4 :
-- Chiffres d'affaires :  $
-- Dont chiffres d'affaires billetterie :  $
-- Dont revenus auxiliaires :  $
-- Coût vols : -  $
-- Dont frais de kérosène : -  $
-- Dont frais d'aéroport : -  $
+- Chiffres d'affaires : 1 530 097 $
+- Dont chiffres d'affaires billetterie : 1 144 056 $
+- Dont revenus auxiliaires : 386 041 $
+- Coût vols : - 128 666 $
+- Dont frais de kérosène : - 87 749 $
+- Dont frais d'aéroport : - 40 917 $
 - Dont autres charges : 0 $
 
-- Résultats du vol :  $
+- Résultats du vol : 1 401 431 $
 
 
 Avant :
@@ -1129,7 +1129,7 @@ Résultats R5 ( Avions + Routes ) :
 - Résultats du vol : 1 409 929 $
 
 
-Après ( 1t cargo retirer ) :
+Après ( 10 pax eco retirer ) :
 Routes :
 1. (CGK) -> BHJ
 - Catégorie 7
@@ -1146,8 +1146,8 @@ Routes :
 
 Résultats R5 ( Avions + Routes ) :
 1. Configuration Avions : 
-- 196 sièges eco / 52 sièges business/ 2 sièges premières / 16 cargo.
-- 392 sièges eco / 104 sièges business/ 4 sièges premières / 36 cargo visibles dans résultats.
+- 186 sièges eco / 52 sièges business/ 2 sièges premières / 17 cargo.
+- 372 sièges eco / 104 sièges business/ 4 sièges premières / 34 cargo visibles dans résultats.
 
 2. Aller -> CGK - Jakarta 
 - Status :
