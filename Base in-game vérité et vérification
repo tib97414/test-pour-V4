@@ -858,9 +858,9 @@ Variation observée : −1,00 t et −2 069 $ de kérosène.
 
 Calcul attendu :
 0,1875 × 5 182 × 2,13 × 1,00
-= 2 069,40 $
+= 2 069,56 $
 
-Écart : 0,40 $.
+Écart absolu avec les 2 069 $ observés : 0,56 $.
 
 Statut : [CONFIRMÉ — variation de 1,00 t de cargo sur ULR]
 
@@ -878,24 +878,66 @@ Variation observée : −1,00 t et −2 069 $ de kérosène.
 
 Calcul attendu :
 0,1875 × 5 180 × 2,13 × 1,00
-= 2 068,60 $
+= 2 068,76 $
 
-Écart : 0,40 $.
+Écart absolu avec les 2 069 $ observés : 0,24 $.
 
 Statut : [CONFIRMÉ — variation de 1,00 t de PAX éco sur ULR]
 
+Test PAX business — CGK → IXC, 5 182 km
+
+Avant : 196 éco / 52 business / 2 première / 17 cargo
+Charge : 43,40 t
+Kérosène : 89 818 $
+
+Après : 196 éco / 51 business / 2 première / 17 cargo
+Charge : 43,275 t (43,28 t si affichée au centième)
+Kérosène : 89 560 $
+
+Variation observée : −0,125 t et −258 $ de kérosène.
+
+Calcul attendu :
+0,1875 × 5 182 × 2,13 × 0,125
+= 258,70 $
+
+Écart absolu avec les 258 $ observés : 0,70 $.
+
+Statut : [CONFIRMÉ — variation d'un PAX business sur ULR]
+
+Test PAX première — CGK → IXC, 5 182 km
+
+Avant : 196 éco / 52 business / 2 première / 17 cargo
+Charge : 43,40 t
+Kérosène : 89 818 $
+
+Après : 196 éco / 52 business / 1 première / 17 cargo
+Charge : 43,25 t
+Kérosène : 89 508 $
+
+Variation observée : −0,150 t et −310 $ de kérosène.
+
+Calcul attendu :
+0,1875 × 5 182 × 2,13 × 0,150
+= 310,43 $
+
+Écart absolu avec les 310 $ observés : 0,43 $.
+
+Statut : [CONFIRMÉ — variation d'un PAX première sur ULR]
+
 Conclusion expérimentale
 
-−1 cargo = −1,00 t
-−10 PAX éco = −1,00 t
+−1 cargo = −1,000 t → −2 069 $ observés
+−10 PAX éco = −1,000 t → −2 069 $ observés
+−1 PAX business = −0,125 t → −258 $ observés
+−1 PAX première = −0,150 t → −310 $ observés
 
-Les deux variations produisent exactement la même variation observée de carburant : −2 069 $.
+Les quatre variations suivent la relation attendue entre la masse retirée et la variation du coût carburant, à moins de 1 $ d'écart avec la formule testée.
 
-L'observation renforce fortement l'utilisation de la masse de charge utile dans le calcul carburant plutôt qu'un simple comptage des passagers ou du cargo.
+L'observation soutient fortement une dépendance du coût carburant à la masse de charge utile plutôt qu'au seul type d'unité retirée.
 
-Cette confirmation reste limitée expérimentalement à l'A350-900ULR, à 2,13 de consommation et aux configurations testées.
+Cette confirmation reste limitée expérimentalement à l'A350-900ULR, à 2,13 de consommation et aux configurations testées. La généralisation à d'autres avions ou consommations reste à tester.
 
-Statut : [CONFIRMÉ — deux masses / deux routes, ULR 2,13]
+Statut : [CONFIRMÉ — quatre variations de catégories/masses, ULR 2,13]
 
 ───
 
@@ -973,11 +1015,30 @@ Kérosène : 89 784 $ → 87 715 $
 Auxiliaires : 384 929 $ → 383 248 $
 Variation auxiliaires : −1 681 $
 
-Dans les deux tests, la charge utile diminue exactement de 1,00 t et le carburant diminue de 2 069 $.
-Pourtant, les revenus auxiliaires évoluent dans des directions opposées.
+Test PAX business — CGK → IXC
+52 business → 51 business
 
-Conclusion : la seule variation de masse ne suffit pas à expliquer la variation des revenus auxiliaires observée ici.
-Les résultats sont compatibles avec une dépendance à la composition de la configuration et/ou aux catégories transportées, mais la formule exacte reste à déterminer.
+Kérosène : 89 818 $ → 89 560 $
+Auxiliaires : 384 923 $ → 384 418 $
+Variation auxiliaires : −505 $
+
+Test PAX première — CGK → IXC
+2 première → 1 première
+
+Kérosène : 89 818 $ → 89 508 $
+Auxiliaires : 384 923 $ → 384 010 $
+Variation auxiliaires : −913 $
+
+Synthèse des variations auxiliaires observées
+
+−1 cargo : +1 118 $
+−10 PAX éco : −1 681 $
+−1 PAX business : −505 $
+−1 PAX première : −913 $
+
+Les quatre tests réduisent la masse utile, mais les revenus auxiliaires ne réagissent pas de manière uniforme. Le retrait d'un cargo augmente les auxiliaires, tandis que les retraits de PAX testés les diminuent.
+
+Conclusion : la seule variation de masse ne suffit pas à expliquer les revenus auxiliaires. Les résultats sont compatibles avec une dépendance à la composition de la configuration et/ou aux catégories transportées, mais la formule exacte reste à déterminer. Ces observations ne permettent pas encore d'isoler l'effet propre de chaque catégorie de tous les autres facteurs possibles.
 
 Statut : [OBSERVÉ — mécanisme à déterminer]
 
@@ -1217,7 +1278,7 @@ Même distance + différentes catégories.
 → À TESTER
 
 Même route + même avion + configurations différentes.
-→ RÉALISÉ PARTIELLEMENT — −1 cargo sur IXC ; −10 éco sur BHJ
+→ RÉALISÉ — −1 cargo, −1 business et −1 première sur IXC ; −10 éco sur BHJ. Effet auxiliaire observé différent selon la catégorie retirée.
 
 Vérifier si le facteur avion reste constant.
 
@@ -1236,10 +1297,10 @@ Même route XWB/ULR.
 → Réalisé sur 10/10 routes
 
 Différentes masses utiles.
-→ RÉALISÉ — −1,00 t cargo et −1,00 t PAX éco sur ULR
+→ RÉALISÉ — −1,00 t cargo, −1,00 t PAX éco, −0,125 t business et −0,150 t première sur ULR
 
 Différentes configurations.
-→ RÉALISÉ PARTIELLEMENT — deux configurations à −1,00 t ; effet carburant confirmé, effet auxiliaire à déterminer
+→ RÉALISÉ — quatre variations de charge testées ; relation carburant/masse confirmée dans le contexte ULR à 2,13, mécanisme auxiliaire toujours à déterminer
 
 Différentes consommations.
 → À TESTER
@@ -1398,6 +1459,12 @@ D072	Deux réductions de 1,00 t produisent la même variation carburant sur deux
 D073	−1 cargo augmente les revenus auxiliaires de 1 118 $	[OBSERVÉ]
 D074	−10 PAX éco diminue les revenus auxiliaires de 1 681 $	[OBSERVÉ]
 D075	À masse retirée identique, les revenus auxiliaires évoluent dans des directions opposées selon la catégorie retirée	[OBSERVÉ / À TESTER]
+D076	−1 PAX business sur ULR = −0,125 t et −258 $ de kérosène sur IXC	[CONFIRMÉ — formule à moins de 1 $]
+D077	−1 PAX première sur ULR = −0,150 t et −310 $ de kérosène sur IXC	[CONFIRMÉ — formule à moins de 1 $]
+D078	Quatre catégories de charge testées confirment la relation carburant/masse sur ULR à 2,13	[CONFIRMÉ — contexte testé]
+D079	−1 PAX business diminue les revenus auxiliaires de 505 $	[OBSERVÉ]
+D080	−1 PAX première diminue les revenus auxiliaires de 913 $	[OBSERVÉ]
+D081	Les variations auxiliaires observées diffèrent selon la catégorie retirée	[OBSERVÉ — mécanisme à déterminer]
 
 ───
 
@@ -1613,3 +1680,15 @@ Renforcement du statut de la formule carburant : confirmation sur plusieurs mass
 Ajout de l'observation inattendue sur les revenus auxiliaires : −1 cargo augmente les auxiliaires de 1 118 $, tandis que −10 PAX éco les diminue de 1 681 $.
 
 Séparation explicite entre l'effet de la masse sur le carburant et l'effet de la composition de la configuration sur les revenus auxiliaires.
+
+Version 0.8
+
+Ajout de deux tests expérimentaux supplémentaires sur l'A350-900ULR : retrait d'un PAX business et d'un PAX première sur CGK → IXC.
+
+La relation carburant/masse est désormais vérifiée sur quatre variations de configuration couvrant cargo, éco, business et première, dans le contexte testé de l'ULR à 2,13.
+
+Ajout des variations de revenus auxiliaires observées pour business (−505 $) et première (−913 $), sans supposer de formule explicative.
+
+Correction des valeurs calculées de la formule carburant dans les deux tests de variation de 1,00 t : 2 069,56 $ sur 5 182 km et 2 068,76 $ sur 5 180 km.
+
+Mise à jour des tests à réaliser et du journal des découvertes jusqu'à D081.
