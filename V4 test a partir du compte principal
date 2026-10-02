@@ -1377,3 +1377,141 @@ Résultats R1 ( Avions + Routes ) :
 - Dont autres charges : 0 $
 
 - Résultats du vol : 3 404 310 $
+
+
+Routes :
+1. (CGK) -> FNI
+- Catégorie 6
+- Distance depuis CGK : 11 463 km
+- Taxes :  $
+- Tarifs billet classe eco : 3753 $
+- Tarifs billet classe business : 5579 $
+- Tarifs billet classe première : 10 243 $
+- Tarifs billet cargo : 17 226 $
+- Demande classe eco : 2 801
+- Demande classe business : 237
+- Demande classe première : 41
+- Demande cargo : 32
+
+
+Résultats R2 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 264 sièges eco / 32 sièges business / 20 sièges premières / 12 cargo.
+- 528 sièges eco / 64 sièges business / 40 sièges premières / 24 cargo visibles dans résultats.
+
+2.Aller -> CGK - Jakarta 
+- Status :
+- Embarquement :  le 
+- Décollage :  le 
+- Débarquement :  le 
+- Préparation du retour :  le 
+
+3. Retour -> FNI - Nîmes
+- Status :
+- Embarquement :  le 
+- Décollage :  le 
+- Débarquement :  le 
+- Avion disponible :  le 
+
+4. Résultats Routes 2 :
+- Chiffres d'affaires :  $
+- Dont chiffres d'affaires billetterie :  $
+- Dont revenus auxiliaires :  $
+- Coût vols : -  $
+- Dont frais de kérosène : -  $
+- Dont frais d'aéroport : -  $
+- Dont autres charges : 0 $
+
+- Résultats du vol
+
+
+Routes :
+1. (CGK) -> RTM
+- Catégorie 6
+- Distance depuis CGK : 11 382 km
+- Taxes :  $
+- Tarifs billet classe eco : 3868 $
+- Tarifs billet classe business : 5661 $
+- Tarifs billet classe première : 10 288 $
+- Tarifs billet cargo : 17 144 $
+- Demande classe eco : 3059
+- Demande classe business : 238
+- Demande classe première : 41
+- Demande cargo : 32
+
+
+Résultats R3 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 264 sièges eco / 32 sièges business / 20 sièges premières / 12 cargo.
+- 528 sièges eco / 64 sièges business / 40 sièges premières / 24 cargo visibles dans résultats.
+
+2.Aller -> CGK - Jakarta 
+- Status :
+- Embarquement :  le 
+- Décollage :  le 
+- Débarquement :  le 
+- Préparation du retour :  le 
+
+3. Retour -> RTM - Rotterdam
+- Status :
+- Embarquement :  le 
+- Décollage :  le 
+- Débarquement :  le 
+- Avion disponible :  le 
+
+4. Résultats Routes 3 :
+- Chiffres d'affaires :  $
+- Dont chiffres d'affaires billetterie :  $
+- Dont revenus auxiliaires :  $
+- Coût vols : -  $
+- Dont frais de kérosène : -  $
+- Dont frais d'aéroport : -  $
+- Dont autres charges : 0 $
+
+- Résultats du vol
+
+
+Routes :
+1. (CGK) -> GJL
+- Catégorie 6
+- Distance depuis CGK : 11 377 km
+- Taxes :  $
+- Tarifs billet classe eco : 3980 $
+- Tarifs billet classe business : 4955 $
+- Tarifs billet classe première : 8569 $
+- Tarifs billet cargo : 17 071 $
+- Demande classe eco : 3060
+- Demande classe business : 236
+- Demande classe première : 42
+- Demande cargo : 32
+
+
+Résultats R4 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 264 sièges eco / 32 sièges business / 20 sièges premières / 12 cargo.
+- 528 sièges eco / 64 sièges business / 40 sièges premières / 24 cargo visibles dans résultats.
+
+2.Aller -> CGK - Jakarta 
+- Status :
+- Embarquement :  le 
+- Décollage :  le 
+- Débarquement :  le 
+- Préparation du retour :  le 
+
+3. Retour -> GJL - Jijel
+- Status :
+- Embarquement :  le 
+- Décollage :  le 
+- Débarquement :  le 
+- Avion disponible :  le 
+
+4. Résultats Routes 4 :
+- Chiffres d'affaires :  $
+- Dont chiffres d'affaires billetterie :  $
+- Dont revenus auxiliaires :  $
+- Coût vols : -  $
+- Dont frais de kérosène : -  $
+- Dont frais d'aéroport : -  $
+- Dont autres charges : 0 $
+
+- Résultats du vol
