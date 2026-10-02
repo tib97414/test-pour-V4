@@ -1383,7 +1383,7 @@ Routes :
 1. (CGK) -> FNI
 - Catégorie 6
 - Distance depuis CGK : 11 463 km
-- Taxes :  $
+- Taxes : 16 173 $
 - Tarifs billet classe eco : 3753 $
 - Tarifs billet classe business : 5579 $
 - Tarifs billet classe première : 10 243 $
@@ -1401,35 +1401,35 @@ Résultats R2 ( Avions + Routes ) :
 
 2.Aller -> CGK - Jakarta 
 - Status :
-- Embarquement :  le 
-- Décollage :  le 
-- Débarquement :  le 
-- Préparation du retour :  le 
+- Embarquement : 04h00 le 12/05
+- Décollage : 04h20 le 12/05
+- Débarquement : 17h18 le 12/05
+- Préparation du retour : 17h38 le 12/05
 
 3. Retour -> FNI - Nîmes
 - Status :
-- Embarquement :  le 
-- Décollage :  le 
-- Débarquement :  le 
-- Avion disponible :  le 
+- Embarquement : 18h18 le 12/05
+- Décollage : 18h38 le 12/05
+- Débarquement : 07h37 le 13/05
+- Avion disponible : 08h00 le 13/05
 
 4. Résultats Routes 2 :
-- Chiffres d'affaires :  $
-- Dont chiffres d'affaires billetterie :  $
-- Dont revenus auxiliaires :  $
-- Coût vols : -  $
-- Dont frais de kérosène : -  $
-- Dont frais d'aéroport : -  $
+- Chiffres d'affaires : 3 703 328 $
+- Dont chiffres d'affaires billetterie : 3 161 784 $
+- Dont revenus auxiliaires : 541 544 $
+- Coût vols : - 261 937 $
+- Dont frais de kérosène : - 221 503 $
+- Dont frais d'aéroport : - 40 434 $
 - Dont autres charges : 0 $
 
-- Résultats du vol
+- Résultats du vol : 3 441 991 $
 
 
 Routes :
 1. (CGK) -> RTM
 - Catégorie 6
 - Distance depuis CGK : 11 382 km
-- Taxes :  $
+- Taxes : 16 173 $
 - Tarifs billet classe eco : 3868 $
 - Tarifs billet classe business : 5661 $
 - Tarifs billet classe première : 10 288 $
@@ -1447,35 +1447,35 @@ Résultats R3 ( Avions + Routes ) :
 
 2.Aller -> CGK - Jakarta 
 - Status :
-- Embarquement :  le 
-- Décollage :  le 
-- Débarquement :  le 
-- Préparation du retour :  le 
+- Embarquement : 08h00 le 13/05
+- Décollage : 08h20 le 13/05
+- Débarquement : 21h13 le 13/05
+- Préparation du retour : 21h33 le 13/05
 
 3. Retour -> RTM - Rotterdam
 - Status :
-- Embarquement :  le 
-- Décollage :  le 
-- Débarquement :  le 
-- Avion disponible :  le 
+- Embarquement : 22h13 le 13/05
+- Décollage : 22h33 le 13/05
+- Débarquement : 11h26 le 14/05
+- Avion disponible : 12h00 le 14/05
 
 4. Résultats Routes 3 :
-- Chiffres d'affaires :  $
-- Dont chiffres d'affaires billetterie :  $
-- Dont revenus auxiliaires :  $
-- Coût vols : -  $
-- Dont frais de kérosène : -  $
-- Dont frais d'aéroport : -  $
+- Chiffres d'affaires : 3 769 612 $
+- Dont chiffres d'affaires billetterie : 3 227 584 $
+- Dont revenus auxiliaires : 542 028 $
+- Coût vols : - 260 372 $
+- Dont frais de kérosène : - 219 938 $
+- Dont frais d'aéroport : - 40 434 $
 - Dont autres charges : 0 $
 
-- Résultats du vol
+- Résultats du vol : 3 509 240 $
 
 
 Routes :
 1. (CGK) -> GJL
 - Catégorie 6
 - Distance depuis CGK : 11 377 km
-- Taxes :  $
+- Taxes : 15 608 $
 - Tarifs billet classe eco : 3980 $
 - Tarifs billet classe business : 4955 $
 - Tarifs billet classe première : 8569 $
@@ -1514,4 +1514,4 @@ Résultats R4 ( Avions + Routes ) :
 - Dont frais d'aéroport : -  $
 - Dont autres charges : 0 $
 
-- Résultats du vol
+- Résultats du vol :  $
