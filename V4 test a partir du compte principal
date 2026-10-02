@@ -1038,6 +1038,52 @@ Résultats R4 ( Avions + Routes ) :
 - Résultats du vol : 1 410 336 $
 
 
+Après ( 4 pax eco retirer) :
+Routes :
+1. (CGK) -> IXC
+- Catégorie 7
+- Distance depuis CGK : 5182 km
+- Taxes : 11 690 $
+- Tarifs billet classe eco : 1762 $
+- Tarifs billet classe business : 2343 $
+- Tarifs billet classe première : 4052 $
+- Tarifs billet cargo : 6046 $
+- Demande classe eco : 4608
+- Demande classe business : 201
+- Demande classe première : 30
+- Demande cargo : 529
+
+Résultats R4 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 192 sièges eco / 52 sièges business/ 2 sièges premières / 17 cargo.
+- 384 sièges eco / 104 sièges business/ 4 sièges premières / 34 cargo visibles dans résultats.
+
+2. Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 10h15 le 14/04
+- Décollage : 10h35 le 14/04
+- Débarquement : 16h16 le 14/04
+- Préparation du retour : 16h36 le 14/04
+
+3. Retour -> IXC - Chandigarh
+- Status :
+- Embarquement : 17h16 le 14/04
+- Décollage : 17h36 le 14/04
+- Débarquement : 23h17 le 14/04
+- Avion disponible : 23h45 le 14/04
+
+4. Résultats Routes 4 :
+- Chiffres d'affaires :  $
+- Dont chiffres d'affaires billetterie :  $
+- Dont revenus auxiliaires :  $
+- Coût vols : -  $
+- Dont frais de kérosène : -  $
+- Dont frais d'aéroport : -  $
+- Dont autres charges : 0 $
+
+- Résultats du vol :  $
+
+
 Après ( 1t cargo retirer) :
 Routes :
 1. (CGK) -> IXC
@@ -1266,3 +1312,68 @@ Résultats R5 ( Avions + Routes ) :
 - Dont autres charges : 0 $
 
 - Résultats du vol : 1 375 077 $
+
+
+
+Avions :
+1. A330-800
+- Catégorie 5
+- Rayon d'action : 15 094 km
+- Vitesse : 883 km/h
+- Consommation : 2,27 L/pax/100km
+- Sièges : 406
+- Sièges en full eco : 406
+- Sièges en full business : 225
+- Sièges en full première : 96
+- Cargo transportable si aucun siège : 46
+- Charges utiles : 46t
+- Charges utiles avec full eco : 40,6t / 46t
+- Charges utiles avec full business : 28,12t / 46t
+- Charges utiles avec full première : 14,40t / 46t
+- Charges utiles avec full cargo : 46t / 46t
+
+
+Routes :
+1. (CGK) -> EBU
+- Catégorie 6
+- Distance depuis CGK : 11 458 km
+- Taxes : 15 988 $
+- Tarifs billet classe eco : 3752 $
+- Tarifs billet classe business : 5318 $
+- Tarifs billet classe première : 9762 $
+- Tarifs billet cargo : 17 176 $
+- Demande classe eco : 2525
+- Demande classe business : 237
+- Demande classe première : 41
+- Demande cargo : 32
+
+
+Résultats R1 ( Avions + Routes ) :
+1. Configuration Avions : 
+- 264 sièges eco / 32 sièges business / 20 sièges premières / 12 cargo.
+- 568 sièges eco / 64 sièges business / 40 sièges premières / 24 cargo visibles dans résultats.
+
+2.Aller -> CGK - Jakarta 
+- Status :
+- Embarquement : 00h00 le 11/05 
+- Décollage : 00h20 le 11/05
+- Débarquement : 13h18 le 11/05
+- Préparation du retour : 13h38 le 11/05
+
+3. Retour -> EBU - Saint-Etienne
+- Status :
+- Embarquement : 14h18 le 11/05
+- Décollage : 14h38 le 11/05
+- Débarquement : 03h37 le 12/05
+- Avion disponible : 04h00 le 12/05
+
+4. Résultats Routes 1 :
+- Chiffres d'affaires : 3 665 688 $
+- Dont chiffres d'affaires billetterie : 3 124 112 $
+- Dont revenus auxiliaires : 541 576 $
+- Coût vols : - 261 378 $
+- Dont frais de kérosène : - 221 407 $
+- Dont frais d'aéroport : - 39 971 $
+- Dont autres charges : 0 $
+
+- Résultats du vol : 3 404 310 $
