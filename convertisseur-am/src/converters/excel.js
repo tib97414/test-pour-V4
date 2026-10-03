@@ -12,6 +12,12 @@ export async function parseExcel(file) {
   const sheet = workbook.Sheets[sheetName];
   return {
     sheetName,
-    rows: XLSX.utils.sheet_to_json(sheet, { header: 1, defval: "" })
+    // With header: 1, SheetJS otherwise includes blank rows inside the
+    // worksheet's used range. Excel files can have formatting down to row 1000.
+    rows: XLSX.utils.sheet_to_json(sheet, {
+      header: 1,
+      defval: "",
+      blankrows: false
+    })
   };
 }
