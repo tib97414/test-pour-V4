@@ -1300,7 +1300,7 @@ Différentes masses utiles.
 → RÉALISÉ — −1,00 t cargo, −1,00 t PAX éco, −0,125 t business et −0,150 t première sur ULR
 
 Différentes configurations.
-→ RÉALISÉ — quatre variations de charge testées ; relation carburant/masse confirmée dans le contexte ULR à 2,13, mécanisme auxiliaire toujours à déterminer
+→ RÉALISÉ — cinq variations de charge testées (−1 cargo, −10 éco, −1 business, −1 première, −4 éco) ; relation carburant/masse confirmée dans le contexte ULR à 2,13, mécanisme auxiliaire toujours à déterminer
 
 Différentes consommations.
 → À TESTER
@@ -1685,10 +1685,193 @@ Version 0.8
 
 Ajout de deux tests expérimentaux supplémentaires sur l'A350-900ULR : retrait d'un PAX business et d'un PAX première sur CGK → IXC.
 
-La relation carburant/masse est désormais vérifiée sur quatre variations de configuration couvrant cargo, éco, business et première, dans le contexte testé de l'ULR à 2,13.
+La relation carburant/masse est désormais vérifiée sur cinq variations de configuration couvrant cargo, éco, business et première, dans le contexte testé de l'ULR à 2,13.
 
 Ajout des variations de revenus auxiliaires observées pour business (−505 $) et première (−913 $), sans supposer de formule explicative.
 
 Correction des valeurs calculées de la formule carburant dans les deux tests de variation de 1,00 t : 2 069,56 $ sur 5 182 km et 2 068,76 $ sur 5 180 km.
 
 Mise à jour des tests à réaliser et du journal des découvertes jusqu'à D081.
+
+
+───
+
+16. Renforcements expérimentaux — version 0.9
+
+16.1 A350-900ULR — cinquième variation de charge : −4 PAX éco sur IXC
+
+Route : CGK → IXC
+Distance : 5 182 km
+Consommation affichée : 2,13
+Configuration avant : 196 éco / 52 business / 2 première / 17 cargo par avion
+Masse calculée avant : 43,40 t
+Configuration après : 192 éco / 52 business / 2 première / 17 cargo par avion
+Masse calculée après : 43,00 t
+Variation de masse : −0,40 t
+
+Résultats observés avant :
+Kérosène : 89 818 $
+Frais d'aéroport : 40 917 $
+Revenus auxiliaires : 384 923 $
+CA billetterie : 1 156 148 $
+CA total : 1 541 071 $
+Coûts : 130 735 $
+Résultat : 1 410 336 $
+
+Résultats observés après :
+Kérosène : 88 991 $
+Frais d'aéroport : 40 917 $
+Revenus auxiliaires : 384 251 $
+CA billetterie : 1 142 052 $
+CA total : 1 526 303 $
+Coûts : 129 908 $
+Résultat : 1 396 395 $
+
+Variation observée :
+Kérosène : −827 $
+Frais d'aéroport : 0 $
+Revenus auxiliaires : −672 $
+CA billetterie : −14 096 $
+CA total : −14 768 $
+Coûts : −827 $
+Résultat : −13 941 $
+
+Vérification de la formule carburant :
+0,1875 × 5 182 × 2,13 × 0,40 = 827,82 $
+Baisse observée : 827 $
+Écart observé − calcul : −0,82 $.
+
+Statut : [CONFIRMÉ — relation carburant/masse sur cinq variations ULR à 2,13, avec écart inférieur à 1 $ dans les cas testés].
+
+Cette confirmation reste circonscrite à l'A350-900ULR et à la consommation 2,13. La généralisation à d'autres appareils ou consommations doit encore être vérifiée.
+
+Vérification comptable :
+La billetterie baisse de 14 096 $, cohérente avec 8 sièges éco comptabilisés en moins au tarif observé de 1 762 $.
+Les auxiliaires baissent de 672 $.
+Le CA total baisse donc de 14 768 $.
+Les coûts baissent de 827 $, puisque les frais d'aéroport sont inchangés.
+La variation du résultat est cohérente : −14 768 − (−827) = −13 941 $.
+
+16.2 Revenus auxiliaires — piste issue des retraits de sièges éco
+
+Test IXC : retrait de 4 éco par avion = 8 sièges comptabilisés en moins ; auxiliaires −672 $, soit 84,00 $ par siège comptabilisé.
+Test BHJ précédent : retrait de 10 éco par avion = 20 sièges comptabilisés en moins ; auxiliaires −1 681 $, soit 84,05 $ par siège comptabilisé.
+
+Les deux résultats sont proches malgré des routes différentes et des retraits de taille différente.
+Statut : [HYPOTHÈSE — piste à tester].
+Ne pas utiliser 84 $ par siège comme constante confirmée : le mécanisme des auxiliaires reste à déterminer et d'autres tests ont montré des variations dépendant de la catégorie retirée.
+
+16.3 A330-800 — nouvelle série de six routes
+
+Caractéristiques de l'appareil :
+Catégorie 5 ; rayon d'action 15 094 km ; vitesse 883 km/h ; consommation 2,27 L/pax/100 km ; configuration 264 éco / 32 business / 20 première / 12 cargo par avion.
+Masse calculée : 264 × 0,100 + 32 × 0,125 + 20 × 0,150 + 12 × 1,000 = 45,40 t.
+Les résultats de sièges comptabilisés sont le double de la configuration : 528 éco / 64 business / 40 première / 24 cargo.
+
+Routes et valeurs observées :
+
+Route | Distance | Taxes | Kérosène | Frais d'aéroport | Auxiliaires | CA billetterie | CA total | Coûts | Résultat | Cycle
+R1 CGK→EBU | 11 458 km | 15 988 $ | 221 407 $ | 39 971 $ | 541 576 $ | 3 124 112 $ | 3 665 688 $ | 261 378 $ | 3 404 310 $ | 28 h
+R2 CGK→FNI | 11 463 km | 16 173 $ | 221 503 $ | 40 434 $ | 541 544 $ | 3 161 784 $ | 3 703 328 $ | 261 937 $ | 3 441 991 $ | 28 h
+R3 CGK→RTM | 11 382 km | 16 173 $ | 219 938 $ | 40 434 $ | 542 028 $ | 3 227 584 $ | 3 769 612 $ | 260 372 $ | 3 509 240 $ | 28 h
+R4 CGK→GJL | 11 377 km | 15 608 $ | 219 842 $ | 39 021 $ | 542 055 $ | 3 171 024 $ | 3 713 079 $ | 258 863 $ | 3 454 216 $ | 28 h
+R5 CGK→QSF | 11 431 km | 16 180 $ | 220 885 $ | 40 452 $ | 541 734 $ | 3 222 456 $ | 3 764 190 $ | 261 337 $ | 3 502 853 $ | 28 h
+R6 CGK→BJA | 11 449 km | 16 194 $ | 221 233 $ | 40 485 $ | 541 629 $ | 3 263 032 $ | 3 804 661 $ | 261 718 $ | 3 542 943 $ | 28 h
+
+Statut des valeurs de route : [OBSERVÉ].
+Les équations de CA total, coûts et résultat restent cohérentes avec les valeurs enregistrées.
+
+16.4 Formule carburant — renforcement indépendant avec l'A330-800
+
+Formule testée :
+Kérosène = 0,1875 × distance × consommation × masse calculée en tonnes.
+
+Avec une consommation de 2,27 et une masse de 45,40 t :
+
+Route | Kérosène observé | Valeur calculée | Observé − calculé
+R1 | 221 407 $ | 221 407,23 $ | −0,23 $
+R2 | 221 503 $ | 221 503,85 $ | −0,85 $
+R3 | 219 938 $ | 219 938,65 $ | −0,65 $
+R4 | 219 842 $ | 219 842,04 $ | −0,04 $
+R5 | 220 885 $ | 220 885,50 $ | −0,50 $
+R6 | 221 233 $ | 221 233,32 $ | −0,32 $
+
+Les six écarts absolus sont inférieurs à 1 $.
+Statut : [CONFIRMÉ — série A330-800, six routes, consommation 2,27 et masse calculée 45,40 t].
+
+Cette série renforce fortement la formule au-delà de l'A350-900ULR : autre modèle d'avion, autre consommation et autre masse calculée. Elle ne dispense pas de tests avec d'autres consommations ou d'autres facteurs de jeu potentiels.
+
+16.5 Formule de durée — première vérification à vitesse différente
+
+Formule candidate conservée :
+ARRONDI SUPÉRIEUR AU QUART D'HEURE (((distance / vitesse) + 1) × 2).
+
+Pour l'A330-800 à 883 km/h, les six routes R1 à R6 donnent un cycle calculé de 28 h et le jeu affiche 28 h sur les six routes.
+Statut : [CONFIRMÉ — six nouvelles routes à 883 km/h, dans la plage de distances testée].
+
+Cette observation renforce la généralisation de la formule à une vitesse différente de 911 km/h. Elle ne constitue pas encore une validation universelle pour toutes les vitesses, distances ou catégories d'appareils.
+
+16.6 Frais d'aéroport — maintien du litige ouvert
+
+Formule candidate : taxes affichées × catégorie / 2 ; catégorie A330-800 = 5, coefficient = 2,5.
+
+Route | Taxes affichées | Calcul théorique | Frais observés | Écart observé − calcul
+R1 | 15 988 $ | 39 970,00 $ | 39 971 $ | +1,00 $
+R2 | 16 173 $ | 40 432,50 $ | 40 434 $ | +1,50 $
+R3 | 16 173 $ | 40 432,50 $ | 40 434 $ | +1,50 $
+R4 | 15 608 $ | 39 020,00 $ | 39 021 $ | +1,00 $
+R5 | 16 180 $ | 40 450,00 $ | 40 452 $ | +2,00 $
+R6 | 16 194 $ | 40 485,00 $ | 40 485 $ | 0,00 $
+
+Les écarts vont de 0 à +2 $ pour cette série. Ils ne sont pas supprimés ni corrigés.
+Statut : [LITIGE OUVERT]. Les données ne justifient pas de remplacer les frais observés par le calcul théorique.
+
+16.7 Journal des découvertes — ajouts
+
+D082 — ULR IXC : retrait de 4 éco par avion, masse −0,40 t, kérosène −827 $ ; formule prédit −827,82 $. [CONFIRMÉ — dans le contexte testé]
+D083 — Relation carburant/masse ULR vérifiée sur cinq variations : −1 cargo, −10 éco, −1 business, −1 première, −4 éco. [CONFIRMÉ — ULR, consommation 2,13]
+D084 — ULR IXC : retrait de 4 éco par avion, auxiliaires −672 $ pour 8 sièges comptabilisés en moins, soit 84,00 $/siège. [OBSERVÉ]
+D085 — ULR BHJ : retrait de 10 éco par avion, auxiliaires −1 681 $ pour 20 sièges comptabilisés en moins, soit 84,05 $/siège. [OBSERVÉ]
+D086 — Proximité des ratios auxiliaires par siège entre IXC et BHJ. [HYPOTHÈSE — à tester, pas une formule confirmée]
+D087 — A330-800 : formule carburant 0,1875 × distance × consommation × masse calculée reproduite sur six routes avec un écart inférieur à 1 $. [CONFIRMÉ — série A330-800 testée]
+D088 — A330-800 : formule de durée reproduite sur six routes à 883 km/h, cycles observés de 28 h. [CONFIRMÉ — dans la plage testée]
+D089 — A330-800 : frais d'aéroport comparés à taxes × catégorie / 2 ; écarts de 0 à +2 $. [LITIGE OUVERT]
+
+16.8 Mise à jour des tests
+
+Tests carburant — variations de charge ULR :
+→ CINQ variations réalisées : −1 cargo sur IXC ; −10 éco sur BHJ ; −1 business sur IXC ; −1 première sur IXC ; −4 éco sur IXC.
+→ Relation carburant/masse confirmée pour les configurations testées sur l'ULR à 2,13.
+
+Tests carburant — autre appareil et autre consommation :
+→ RÉALISÉ — A330-800, six routes, consommation 2,27, masse calculée 45,40 t ; écart inférieur à 1 $ sur chaque route.
+
+Tests durée / vitesse :
+→ RÉALISÉ — A330-800 à 883 km/h sur six routes ; formule cohérente avec 28 h affichées.
+→ À POURSUIVRE — tester d'autres vitesses, distances et appareils avant toute généralisation universelle.
+
+Tests revenus auxiliaires :
+→ AJOUTÉ — ratios proches de 84 $ par siège comptabilisé sur deux tests de retrait d'éco, à considérer uniquement comme piste.
+→ À TESTER — répéter sur davantage de routes et de configurations ; contrôler l'effet des catégories et de la route.
+
+Tests frais d'aéroport :
+→ AJOUTÉ — six observations A330-800 ; écarts 0 à +2 $.
+→ LITIGE MAINTENU — précision interne, arrondi ou traitement intermédiaire non identifié.
+
+───
+
+
+Version 0.9
+
+Ajout du cinquième test de variation de charge sur l'A350-900ULR : retrait de 4 PAX éco par avion sur CGK → IXC.
+La masse calculée passe de 43,40 t à 43,00 t.
+Le carburant observé passe de 89 818 $ à 88 991 $, soit −827 $.
+La formule 0,1875 × distance × consommation × variation de masse prédit une baisse de 827,82 $, soit un écart inférieur à 1 $.
+La relation carburant/masse est donc renforcée sur cinq variations de charge, toujours dans le contexte ULR à 2,13.
+
+Ajout des six routes du circuit A330-800.
+La formule carburant est reproduite sur les six routes avec un écart inférieur à 1 $ par route.
+La formule de durée est également cohérente sur les six routes à 883 km/h : le jeu affiche 28 h pour chaque rotation.
+Les écarts de frais d'aéroport de l'A330-800 sont ajoutés au litige ouvert, sans modifier la formule en fonction de résultats encore imparfaits.
+
+Ajout d'une observation exploratoire sur les revenus auxiliaires : le retrait de 4 éco par avion sur IXC retire 8 sièges comptabilisés et fait baisser les auxiliaires de 672 $, soit 84 $ par siège comptabilisé. Le test antérieur de retrait de 10 éco par avion sur BHJ donnait une baisse de 1 681 $ pour 20 sièges comptabilisés, soit 84,05 $ par siège. Cette proximité est une piste, pas une formule confirmée.
