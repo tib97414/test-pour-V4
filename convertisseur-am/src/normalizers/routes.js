@@ -19,11 +19,33 @@ function toNumber(value) {
   const text = String(value ?? "").trim();
   if (!text) return null;
 
-  // Accepts plain numbers and French decimal commas. More complex locale
-  // formats are deliberately left for a dedicated, explicit parser/test.
-  const normalized = text.replace(/\s/g, "").replace(",", ".");
-  if (!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(normalized)) return null;
+  // Accept both common export conventions:
+  // 6,099.00 (US) / 6.099,00 (French) / 6 099,00 / 6099,00.
+  // If both separators exist, the last one is treated as the decimal separator.
+  let normalized = text.replace(/[\s\u00A0\u202F']/g, "");
+  const hasComma = normalized.includes(",");
+  const hasDot = normalized.includes(".");
 
+  if (hasComma && hasDot) {
+    if (normalized.lastIndexOf(".") > normalized.lastIndexOf(",")) {
+      normalized = normalized.replace(/,/g, "");
+    } else {
+      normalized = normalized.replace(/\./g, "").replace(",", ".");
+    }
+  } else if (hasComma || hasDot) {
+    const separator = hasComma ? "," : ".";
+    const groupingPattern = separator === ","
+      ? /^[+-]?\d{1,3}(?:,\d{3})+$/
+      : /^[+-]?\d{1,3}(?:\.\d{3})+$/;
+
+    if (groupingPattern.test(normalized)) {
+      normalized = normalized.replace(new RegExp(separator === "," ? "," : "\\.", "g"), "");
+    } else {
+      normalized = normalized.replace(separator, ".");
+    }
+  }
+
+  if (!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(normalized)) return null;
   const number = Number(normalized);
   return Number.isFinite(number) ? number : null;
 }

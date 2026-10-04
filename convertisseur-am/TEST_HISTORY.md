@@ -32,3 +32,24 @@
 ### Tests effectués
 
 Aucun test de bout en bout dans le navigateur n'est encore déclaré PASS. Le fichier XLSX a été inspecté et la normalisation des 20 lignes a été simulée séparément ; le prochain test doit être exécuté par l'utilisateur dans l'application après lancement local.
+
+### T01 — XLSX import dans le navigateur
+
+- Résultat communiqué par l'utilisateur : 20 routes reconnues, 20 lignes sans erreur, 0 erreur, export JSON disponible.
+- Statut : PASS pour l'import XLSX et la validation dans l'application.
+- Vérification du JSON exporté à effectuer séparément.
+
+### T02 — Comparaison CSV fourni / JSON exporté
+
+- Fichiers reçus : `CGK TEST.csv` et `routes-normalisees.json`.
+- CSV : 20 lignes de données, 13 colonnes attendues.
+- JSON : 20 routes.
+- Les 220 valeurs numériques du CSV, interprétées avec le format `6,099.00`, correspondent aux valeurs du JSON pour les 20 routes.
+- Les identités de route sont présentes dans le JSON sous la forme `CGK:DESTINATION`.
+- Statut : PASS pour la comparaison statique des deux fichiers.
+- Limite : l'import du CSV dans l'interface du navigateur reste à tester.
+
+### Améliorations de l'interface
+
+- Liste déroulante : Synthèse, Routes lues, Doublons, Erreurs détaillées, Avertissements.
+- L'export JSON reste séparé et n'est pas nécessaire pour consulter le rapport.
