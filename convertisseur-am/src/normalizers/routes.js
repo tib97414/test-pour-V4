@@ -58,7 +58,9 @@ function extractDestination(routeName, hub) {
   const raw = String(routeName ?? "").trim();
   if (!raw) return { destination: null, error: "DESTINATION_MISSING" };
 
-  const parts = raw.split(/\s*(?:-|→|->|\/|–|—)\s*/).filter(Boolean);
+  // Keep empty segments: "CGK -" must not become the valid-looking single part "CGK".
+  // Match the two-character arrow before the simple hyphen.
+  const parts = raw.split(/\s*(?:->|→|-|\/|–|—)\s*/);
 
   if (parts.length === 1) {
     const destination = parts[0].trim().toUpperCase();
@@ -70,8 +72,18 @@ function extractDestination(routeName, hub) {
   if (parts.length === 2) {
     const left = parts[0].trim().toUpperCase();
     const right = parts[1].trim().toUpperCase();
-    if (left === hub && right !== hub) return { destination: right, error: null };
+
+    // A missing destination is different from a route that points back to its hub.
+    if (!right) return { destination: null, error: "DESTINATION_MISSING" };
+    if (!left) return { destination: null, error: "ROUTE_AMBIGUOUS" };
+
+    // Check identical origin/destination before the reverse-direction rule.
+    if (left === hub && right === hub) {
+      return { destination: null, error: "DESTINATION_EQUALS_HUB" };
+    }
+    if (left === hub) return { destination: right, error: null };
     if (right === hub) return { destination: null, error: "WRONG_DIRECTION" };
+
     return { destination: null, error: "HUB_MISMATCH_OR_ROUTE_AMBIGUOUS" };
   }
 

@@ -145,7 +145,14 @@ function App() {
                       return <tr key={route.sourceRow}>
                         <td>{route.sourceRow}</td><td>{route.routeName || "—"}</td><td>{route.identity || "—"}</td><td>{route.country || "—"}</td>
                         <td>{route.category ?? "—"}</td><td>{route.distance ?? "—"}</td><td>{route.taxPerFlight ?? "—"}</td>
-                        <td>{route.demand?.economy ?? "—"}</td><td>{route.prices?.economy ?? "—"}</td>
+                        <td>{route.demand?.economy ?? "—"}</td>
+                        <td>{route.demand?.business ?? "—"}</td>
+                        <td>{route.demand?.first ?? "—"}</td>
+                        <td>{route.demand?.cargo ?? "—"}</td>
+                        <td>{route.prices?.economy ?? "—"}</td>
+                        <td>{route.prices?.business ?? "—"}</td>
+                        <td>{route.prices?.first ?? "—"}</td>
+                        <td>{route.prices?.cargo ?? "—"}</td>
                         <td>{issue ? "À vérifier" : "OK"}</td>
                       </tr>;
                     })}

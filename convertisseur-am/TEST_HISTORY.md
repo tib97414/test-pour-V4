@@ -53,3 +53,13 @@ Aucun test de bout en bout dans le navigateur n'est encore déclaré PASS. Le fi
 
 - Liste déroulante : Synthèse, Routes lues, Doublons, Erreurs détaillées, Avertissements.
 - L'export JSON reste séparé et n'est pas nécessaire pour consulter le rapport.
+
+
+### T03 — Validation des destinations (tests navigateur avant correction)
+
+- Route valide `CGK - FBD` : PASS.
+- Route inversée `FBD - CGK` : code `WRONG_DIRECTION`, export bloqué — PASS.
+- Destination effacée dans `CGK - FBD` : code obtenu `DESTINATION_EQUALS_HUB`, alors que la destination est absente — défaut confirmé.
+- Route `CGK - CGK` : code obtenu `WRONG_DIRECTION`, alors que l'origine et la destination sont identiques — défaut confirmé.
+- Correction appliquée dans `extractDestination()` : préserver les segments vides, détecter une destination absente et tester l'égalité au hub avant le sens inverse.
+- Statut de la correction : commit effectué ; les quatre cas doivent être rejoués dans le navigateur pour confirmer l'absence de régression.
