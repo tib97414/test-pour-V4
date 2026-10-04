@@ -118,7 +118,7 @@ function App() {
               <div><span>Routes reconnues</span><strong>{routeCount}</strong></div>
               <div><span>Lignes sans erreur</span><strong>{validCount}</strong></div>
               <div><span>Erreurs</span><strong>{errorCount}</strong></div>
-              <div><span>Doublons</span><strong>{duplicates.length}</strong></div>
+              <div><span>Lignes en doublon</span><strong>{new Set(duplicates.map(item => item.row)).size}</strong></div>
               <div><span>Avertissements</span><strong>{warnings.length}</strong></div>
             </div>
 
@@ -138,7 +138,7 @@ function App() {
             {reportView === "routes" && (
               <div className="table-wrap">
                 <table>
-                  <thead><tr><th>Ligne</th><th>Route</th><th>Identité</th><th>Pays</th><th>Cat.</th><th>Distance</th><th>Taxes</th><th>Demande Éco</th><th>Tarif Éco</th><th>État</th></tr></thead>
+                  <thead><tr><th>Ligne</th><th>Route</th><th>Identité</th><th>Pays</th><th>Cat.</th><th>Distance</th><th>Taxes</th><th>Demande Éco</th><th>Demande Aff.</th><th>Demande 1re</th><th>Demande cargo</th><th>Tarif Éco</th><th>Tarif Aff.</th><th>Tarif 1re</th><th>Tarif cargo</th><th>État</th></tr></thead>
                   <tbody>
                     {(result.routes ?? []).map(route => {
                       const issue = rowIssues.some(item => item.row === route.sourceRow);
