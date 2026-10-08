@@ -91,7 +91,7 @@ function App() {
 
   return (
     <main className="app">
-      <header>
+      <header className="app-header">
         <p className="eyebrow">Script-AM / V4</p>
         <h1>Convertisseur de routes — V1</h1>
         <p>Import Excel ou CSV → détection des colonnes → normalisation → JSON.</p>
@@ -106,9 +106,9 @@ function App() {
 
         {file && <div className="file-info"><strong>Fichier :</strong> {file.name}</div>}
 
-        <button onClick={analyze} disabled={busy}>{busy ? "Analyse…" : "Analyser le fichier"}</button>
+        <button className="button button-primary" onClick={analyze} disabled={busy}>{busy ? "Analyse…" : "Analyser le fichier"}</button>
 
-        {message && <div className="status">{message}</div>}
+        {message && <div className="status status-info">{message}</div>}
 
         {result && (
           <div className="report">
@@ -194,7 +194,7 @@ function App() {
             )}
 
             {errorCount === 0 && result.routes?.length > 0 ? (
-              <button onClick={exportResult}>Exporter le JSON normalisé</button>
+              <button className="button button-secondary" onClick={exportResult}>Exporter le JSON normalisé</button>
             ) : (
               <p>Export bloqué : corrige les erreurs puis relance l'analyse.</p>
             )}
