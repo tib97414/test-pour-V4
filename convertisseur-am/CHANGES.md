@@ -69,6 +69,18 @@ Tous les champs numériques métier ci-dessous doivent représenter des entiers.
 - Le champ `country` est facultatif ; son absence peut déclencher un avertissement, mais ne suffit pas à exclure la route.
 - Un hub ou une autre donnée indispensable ne doit jamais être inventé pour rendre une route exploitable.
 
+### Identité des routes — décisions confirmées
+
+- L'identité canonique d'une route est construite à partir du hub et de la destination normalisés, sous la forme `HUB:DESTINATION` (exemple : `CGK:FBD`).
+- La casse et les espaces superflus ne doivent pas créer de fausses différences d'identité.
+- Les doublons sont détectés à l'intérieur du même hub, sur la combinaison hub + destination. Deux routes vers la même destination depuis des hubs différents ne sont donc pas des doublons au titre de cette règle.
+- Pour Excel/CSV, une destination seule (exemple : `FBD`) est autorisée, car le hub est sélectionné séparément dans le convertisseur ; l'identité est construite avec ce hub.
+- Dans un JSON personnel, le champ `identity` est obligatoire. S'il manque, la route est exclue ; il n'est pas reconstruit silencieusement.
+- Le hub indiqué par une route doit être cohérent avec le hub sélectionné pour l'import. En cas de différence, la route est exclue et l'incohérence est signalée.
+- Le hub, la destination et l'identité doivent désigner la même liaison. Une identité contradictoire ne doit pas être acceptée silencieusement.
+- Les routes inversées, les destinations manquantes, les routes vers le hub lui-même et les routes dont le hub ne correspond pas restent des erreurs de validation distinctes, avec des codes adaptés.
+- Toutes les occurrences d'une identité dupliquée sont exclues et signalées.
+
 ### Rapport
 
 - Le rapport doit distinguer les problèmes globaux du fichier des problèmes propres à chaque route.
@@ -79,8 +91,6 @@ Tous les champs numériques métier ci-dessous doivent représenter des entiers.
 
 ### Étapes de spécification restantes
 
-1. Définir les règles d'identité des routes : cohérence entre hub, destination et identité normalisée, ainsi que la détection des doublons.
-2. Définir la traçabilité des données : rôle et caractère obligatoire ou facultatif de `sourceRow`, `routeName` et des autres champs d'origine.
-3. Finaliser les champs obligatoires/facultatifs du contrat JSON et les comportements précis de récupération partielle.
-4. Transformer la spécification validée en tests automatisés avant d'implémenter les changements correspondants.
-
+1. Définir la traçabilité des données : rôle et caractère obligatoire ou facultatif de `sourceRow`, `routeName` et des autres champs d'origine.
+2. Finaliser la liste des champs obligatoires/facultatifs du contrat JSON, notamment les règles de traçabilité, ainsi que les comportements précis de récupération partielle.
+3. Transformer la spécification validée en tests automatisés avant d'implémenter les changements correspondants.
