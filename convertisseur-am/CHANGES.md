@@ -33,23 +33,27 @@
 - Distinguer les erreurs bloquantes des avertissements/signalements qui n'empêchent pas l'utilisation d'une route.
 - Ne jamais transformer silencieusement une valeur absente en zéro ni inventer une donnée métier.
 
+### Noyau obligatoire d'une route
+
+Le noyau métier obligatoire est confirmé : une route doit fournir sa catégorie, sa distance depuis le hub de départ, les trois demandes passagers (économie, business et première classe) et les trois prix de billet correspondants. Si l'un de ces champs manque ou est invalide, la route est exclue.
+
+| Champ | Statut | Règle | Zéro |
+|---|---|---|---|
+| `category` | Obligatoire | Entier compris entre 1 et 10 inclus | Erreur bloquante |
+| `distance` | Obligatoire | Entier strictement positif | Erreur bloquante |
+| `demand.economy` | Obligatoire | Entier positif ou nul | Zéro accepté avec signalement |
+| `demand.business` | Obligatoire | Entier positif ou nul | Zéro accepté avec signalement |
+| `demand.first` | Obligatoire | Entier positif ou nul | Zéro accepté avec signalement informatif |
+| `prices.economy` | Obligatoire | Entier strictement positif | Erreur bloquante |
+| `prices.business` | Obligatoire | Entier strictement positif | Erreur bloquante |
+| `prices.first` | Obligatoire | Entier strictement positif | Erreur bloquante |
+| `taxPerFlight` | Facultatif | Si présent, entier strictement positif | Absence acceptée |
+| `demand.cargo` | Facultatif | Si présent, entier positif ou nul | Zéro accepté avec signalement |
+| `prices.cargo` | Facultatif | Si présent, entier strictement positif | Absence acceptée |
+
 ### Règles numériques décidées
 
-Tous les champs numériques métier ci-dessous doivent représenter des entiers. Aucune partie fractionnaire réelle n'est autorisée et aucun arrondi automatique ne doit être effectué par l'import.
-
-| Champ | Règle | Zéro |
-|---|---|---|
-| `category` | Entier compris entre 1 et 10 inclus | Erreur bloquante |
-| `distance` | Entier strictement positif | Erreur bloquante |
-| `taxPerFlight` | Facultatif ; si présent, entier strictement positif | Absence acceptée |
-| `demand.economy` | Entier positif ou nul | Zéro accepté avec signalement |
-| `demand.business` | Entier positif ou nul | Zéro accepté avec signalement |
-| `demand.first` | Entier positif ou nul | Zéro accepté avec signalement informatif |
-| `demand.cargo` | Facultatif ; si présent, entier positif ou nul | Zéro accepté avec signalement |
-| `prices.economy` | Entier strictement positif | Erreur bloquante |
-| `prices.business` | Entier strictement positif | Erreur bloquante |
-| `prices.first` | Entier strictement positif | Erreur bloquante |
-| `prices.cargo` | Facultatif ; si présent, entier strictement positif | Absence acceptée |
+Tous les champs numériques métier ci-dessus doivent représenter des entiers. Aucune partie fractionnaire réelle n'est autorisée et aucun arrondi automatique ne doit être effectué par l'import.
 
 - Les valeurs négatives sont interdites pour tous ces champs.
 - Une catégorie doit être un entier compris entre 1 et 10 ; les catégories décimales ou hors intervalle sont rejetées.
@@ -67,6 +71,7 @@ Tous les champs numériques métier ci-dessous doivent représenter des entiers.
 - Un champ obligatoire manquant dans une route entraîne l'exclusion de cette route seulement.
 - Un champ supplémentaire déclenche un avertissement si la structure et les champs connus restent valides ; le champ inconnu n'est pas utilisé dans les calculs.
 - Le champ `country` est facultatif ; son absence peut déclencher un avertissement, mais ne suffit pas à exclure la route.
+- Le champ `routeName` est facultatif dans le JSON ; son absence ne suffit pas à exclure une route si le noyau métier et les autres champs obligatoires du contrat sont valides.
 - Le champ `taxPerFlight` est facultatif. S'il est absent, le convertisseur ne le calcule pas et ne le remplace pas par zéro ; le script V4 décidera des calculs possibles avec ou sans cette donnée.
 - `demand.cargo` et `prices.cargo` sont facultatifs, car certains joueurs n'utilisent pas le cargo. Si ces champs sont présents, leurs valeurs sont validées selon les règles numériques ; s'ils sont absents, ils restent absents et ne sont pas remplacés par zéro.
 - L'absence de `taxPerFlight`, `demand.cargo` ou `prices.cargo` ne suffit pas à exclure une route. Le script V4 gère ensuite les calculs selon les données disponibles.
@@ -93,7 +98,6 @@ Tous les champs numériques métier ci-dessous doivent représenter des entiers.
 - `sourceRow` représente le numéro réel de la ligne dans le fichier source lorsque ce numéro est disponible, notamment pour Excel et CSV. Il ne doit jamais être inventé.
 - Pour un JSON, `sourceRow` peut être absent si aucune notion fiable de ligne source n'est fournie.
 - `routeName` représente le nom brut de la route tel qu'il est fourni par la source. Si la source le fournit, sa valeur d'origine est conservée et ne doit pas être remplacée silencieusement par un texte reconstruit.
-- Dans le JSON, `routeName` est facultatif : son absence ne suffit pas à exclure une route si les autres champs obligatoires sont valides.
 - Le nom d'affichage est une valeur distincte du nom brut. Si aucun `routeName` utilisable n'est fourni, l'application peut générer un nom d'affichage depuis le hub et la destination, par exemple `CGK - FBD`.
 - Un nom d'affichage généré ne doit jamais être présenté comme s'il s'agissait du texte brut d'origine.
 - Si le `routeName` fourni contredit le hub ou la destination validés, la contradiction doit être signalée et traitée par les règles de validation ; la génération d'un nom d'affichage ne doit pas masquer l'incohérence.
@@ -110,6 +114,6 @@ Tous les champs numériques métier ci-dessous doivent représenter des entiers.
 
 ### Étapes de spécification restantes
 
-1. Finaliser les autres champs obligatoires/facultatifs du contrat JSON, notamment la structure globale et les règles précises de récupération partielle.
+1. Finaliser la structure globale du JSON et les règles précises de récupération partielle.
 2. Définir le contrat des métadonnées de provenance et la façon dont les champs bruts, normalisés et calculés sont séparés dans le modèle final.
 3. Transformer la spécification validée en tests automatisés avant d'implémenter les changements correspondants.
