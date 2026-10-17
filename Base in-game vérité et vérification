@@ -1875,3 +1875,47 @@ La formule de durée est également cohérente sur les six routes à 883 km/h : 
 Les écarts de frais d'aéroport de l'A330-800 sont ajoutés au litige ouvert, sans modifier la formule en fonction de résultats encore imparfaits.
 
 Ajout d'une observation exploratoire sur les revenus auxiliaires : le retrait de 4 éco par avion sur IXC retire 8 sièges comptabilisés et fait baisser les auxiliaires de 672 $, soit 84 $ par siège comptabilisé. Le test antérieur de retrait de 10 éco par avion sur BHJ donnait une baisse de 1 681 $ pour 20 sièges comptabilisés, soit 84,05 $ par siège. Cette proximité est une piste, pas une formule confirmée.
+
+───
+
+17. Frais d'aéroport — comparaison entre catégories sur CGK → EBU
+
+Route : CGK → EBU
+Taxes affichées : 15 988 $ pour les deux avions testés.
+
+Observations :
+
+Avion | Catégorie | Taxes affichées | Frais d'aéroport observés
+A330-800 | 5 | 15 988 $ | 39 971 $
+Avion non précisé dans la note de test | 6 | 15 988 $ | 47 966 $
+
+Calcul selon la formule candidate « taxes × catégorie / 2 » :
+
+Catégorie 5 :
+15 988 × 5 / 2 = 39 970 $
+Frais observés : 39 971 $
+Écart observé − calculé : +1 $
+
+Catégorie 6 :
+15 988 × 6 / 2 = 47 964 $
+Frais observés : 47 966 $
+Écart observé − calculé : +2 $
+
+La taxe affichée étant identique pour les deux appareils, cette comparaison est compatible avec une dépendance des frais d'aéroport à la catégorie de l'avion. Les petits écarts restent présents et ne doivent pas être corrigés artificiellement.
+
+Interprétation proposée par le joueur : les écarts pourraient provenir d'une précision cachée des taxes et/ou d'arrondis dans le calcul des frais. Cette explication est plausible, mais elle n'est pas démontrée ; aucune autre tendance claire n'est actuellement établie.
+
+Statut :
+[OBSERVÉ] — taxes affichées identiques à 15 988 $ ; frais de 39 971 $ en catégorie 5 et 47 966 $ en catégorie 6.
+[CALCULÉ] — formule candidate : 39 970 $ en catégorie 5 et 47 964 $ en catégorie 6.
+[HYPOTHÈSE] — précision interne des taxes et/ou arrondis comme explication des écarts.
+[LITIGE OUVERT] — cause exacte des écarts non déterminée. Conserver la formule comme modèle de travail uniquement ; ne pas remplacer les valeurs observées.
+
+D090 — CGK → EBU : mêmes taxes affichées (15 988 $) pour un appareil de catégorie 5 et un appareil de catégorie 6 ; frais observés respectifs de 39 971 $ et 47 966 $. La formule « taxes × catégorie / 2 » donne des écarts de +1 $ et +2 $. [OBSERVÉ / LITIGE OUVERT]
+
+Version 1.0
+
+Ajout de la comparaison des frais d'aéroport sur CGK → EBU entre les catégories 5 et 6, avec taxes affichées identiques.
+Conservation des frais observés et des écarts de +1 $ et +2 $ par rapport à la formule candidate.
+Ajout de l'hypothèse de précision interne des taxes et/ou d'arrondis, sans la considérer comme démontrée.
+Maintien du litige ouvert sur la cause exacte des écarts.
