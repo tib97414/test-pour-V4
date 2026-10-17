@@ -67,7 +67,13 @@ Tous les champs numériques métier ci-dessous doivent représenter des entiers.
 - Un champ obligatoire manquant dans une route entraîne l'exclusion de cette route seulement.
 - Un champ supplémentaire déclenche un avertissement si la structure et les champs connus restent valides ; le champ inconnu n'est pas utilisé dans les calculs.
 - Le champ `country` est facultatif ; son absence peut déclencher un avertissement, mais ne suffit pas à exclure la route.
-- Un hub ou une autre donnée indispensable ne doit jamais être inventé pour rendre une route exploitable.
+- Le champ `taxPerFlight` est facultatif. S'il est absent, le convertisseur ne le calcule pas et ne le remplace pas par zéro ; le script V4 décidera des calculs possibles avec ou sans cette donnée.
+- `demand.cargo` et `prices.cargo` sont facultatifs, car certains joueurs n'utilisent pas le cargo. Si ces champs sont présents, leurs valeurs sont validées selon les règles numériques ; s'ils sont absents, ils restent absents et ne sont pas remplacés par zéro.
+- L'absence de `taxPerFlight`, `demand.cargo` ou `prices.cargo` ne suffit pas à exclure une route. Le script V4 gère ensuite les calculs selon les données disponibles.
+- Le hub global est obligatoire. Le champ `hub` dans chaque route JSON est facultatif : s'il est absent, le hub global fournit le contexte de la route, sans prétendre que cette valeur était présente dans la source.
+- Si le champ `hub` d'une route est présent, il doit correspondre au hub global ; sinon, la route est exclue et l'incohérence est signalée.
+- Une valeur de hub absente au niveau de la route ne doit pas être confondue avec une valeur de hub brute fournie par la source.
+- Une donnée indispensable ne doit jamais être inventée pour rendre une route exploitable.
 
 ### Identité des routes — décisions confirmées
 
@@ -76,7 +82,8 @@ Tous les champs numériques métier ci-dessous doivent représenter des entiers.
 - Les doublons sont détectés à l'intérieur du même hub, sur la combinaison hub + destination. Deux routes vers la même destination depuis des hubs différents ne sont donc pas des doublons au titre de cette règle.
 - Pour Excel/CSV, une destination seule (exemple : `FBD`) est autorisée, car le hub est sélectionné séparément dans le convertisseur ; l'identité est construite avec ce hub.
 - Dans un JSON personnel, le champ `identity` est obligatoire. S'il manque, la route est exclue ; il n'est pas reconstruit silencieusement.
-- Le hub indiqué par une route doit être cohérent avec le hub sélectionné pour l'import. En cas de différence, la route est exclue et l'incohérence est signalée.
+- Pour Excel/CSV, le hub est choisi dans le convertisseur et sert de contexte aux routes importées.
+- Pour le JSON, le hub global est obligatoire et le hub de chaque route est facultatif. S'il est fourni, il doit correspondre au hub global ; en cas de contradiction, la route est exclue et l'incohérence est signalée.
 - Le hub, la destination et l'identité doivent désigner la même liaison. Une identité contradictoire ne doit pas être acceptée silencieusement.
 - Les routes inversées, les destinations manquantes, les routes vers le hub lui-même et les routes dont le hub ne correspond pas restent des erreurs de validation distinctes, avec des codes adaptés.
 - Toutes les occurrences d'une identité dupliquée sont exclues et signalées.
@@ -103,6 +110,6 @@ Tous les champs numériques métier ci-dessous doivent représenter des entiers.
 
 ### Étapes de spécification restantes
 
-1. Finaliser la liste des champs obligatoires/facultatifs du contrat JSON, notamment la structure globale, les champs de route et les règles précises de récupération partielle.
+1. Finaliser les autres champs obligatoires/facultatifs du contrat JSON, notamment la structure globale et les règles précises de récupération partielle.
 2. Définir le contrat des métadonnées de provenance et la façon dont les champs bruts, normalisés et calculés sont séparés dans le modèle final.
 3. Transformer la spécification validée en tests automatisés avant d'implémenter les changements correspondants.
