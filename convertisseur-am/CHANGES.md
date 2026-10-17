@@ -41,15 +41,15 @@ Tous les champs numériques métier ci-dessous doivent représenter des entiers.
 |---|---|---|
 | `category` | Entier compris entre 1 et 10 inclus | Erreur bloquante |
 | `distance` | Entier strictement positif | Erreur bloquante |
-| `taxPerFlight` | Entier strictement positif | Erreur bloquante |
+| `taxPerFlight` | Facultatif ; si présent, entier strictement positif | Absence acceptée |
 | `demand.economy` | Entier positif ou nul | Zéro accepté avec signalement |
 | `demand.business` | Entier positif ou nul | Zéro accepté avec signalement |
 | `demand.first` | Entier positif ou nul | Zéro accepté avec signalement informatif |
-| `demand.cargo` | Entier positif ou nul | Zéro accepté avec signalement |
+| `demand.cargo` | Facultatif ; si présent, entier positif ou nul | Zéro accepté avec signalement |
 | `prices.economy` | Entier strictement positif | Erreur bloquante |
 | `prices.business` | Entier strictement positif | Erreur bloquante |
 | `prices.first` | Entier strictement positif | Erreur bloquante |
-| `prices.cargo` | Entier strictement positif | Erreur bloquante |
+| `prices.cargo` | Facultatif ; si présent, entier strictement positif | Absence acceptée |
 
 - Les valeurs négatives sont interdites pour tous ces champs.
 - Une catégorie doit être un entier compris entre 1 et 10 ; les catégories décimales ou hors intervalle sont rejetées.
