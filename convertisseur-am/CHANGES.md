@@ -81,6 +81,18 @@ Tous les champs numériques métier ci-dessous doivent représenter des entiers.
 - Les routes inversées, les destinations manquantes, les routes vers le hub lui-même et les routes dont le hub ne correspond pas restent des erreurs de validation distinctes, avec des codes adaptés.
 - Toutes les occurrences d'une identité dupliquée sont exclues et signalées.
 
+### Traçabilité et nom d'affichage — décisions confirmées
+
+- `sourceRow` représente le numéro réel de la ligne dans le fichier source lorsque ce numéro est disponible, notamment pour Excel et CSV. Il ne doit jamais être inventé.
+- Pour un JSON, `sourceRow` peut être absent si aucune notion fiable de ligne source n'est fournie.
+- `routeName` représente le nom brut de la route tel qu'il est fourni par la source. Si la source le fournit, sa valeur d'origine est conservée et ne doit pas être remplacée silencieusement par un texte reconstruit.
+- Dans le JSON, `routeName` est facultatif : son absence ne suffit pas à exclure une route si les autres champs obligatoires sont valides.
+- Le nom d'affichage est une valeur distincte du nom brut. Si aucun `routeName` utilisable n'est fourni, l'application peut générer un nom d'affichage depuis le hub et la destination, par exemple `CGK - FBD`.
+- Un nom d'affichage généré ne doit jamais être présenté comme s'il s'agissait du texte brut d'origine.
+- Si le `routeName` fourni contredit le hub ou la destination validés, la contradiction doit être signalée et traitée par les règles de validation ; la génération d'un nom d'affichage ne doit pas masquer l'incohérence.
+- Le type de source (Excel, CSV ou JSON) et le nom du fichier, lorsqu'ils sont disponibles, doivent être conservés au niveau de l'import/du rapport plutôt que répétés dans chaque route si ces informations sont communes au fichier.
+- Les champs d'origine, les champs normalisés et les valeurs calculées doivent garder des rôles distincts ; une même propriété ne doit pas changer de sens selon l'étape du traitement.
+
 ### Rapport
 
 - Le rapport doit distinguer les problèmes globaux du fichier des problèmes propres à chaque route.
@@ -91,6 +103,6 @@ Tous les champs numériques métier ci-dessous doivent représenter des entiers.
 
 ### Étapes de spécification restantes
 
-1. Définir la traçabilité des données : rôle et caractère obligatoire ou facultatif de `sourceRow`, `routeName` et des autres champs d'origine.
-2. Finaliser la liste des champs obligatoires/facultatifs du contrat JSON, notamment les règles de traçabilité, ainsi que les comportements précis de récupération partielle.
+1. Finaliser la liste des champs obligatoires/facultatifs du contrat JSON, notamment la structure globale, les champs de route et les règles précises de récupération partielle.
+2. Définir le contrat des métadonnées de provenance et la façon dont les champs bruts, normalisés et calculés sont séparés dans le modèle final.
 3. Transformer la spécification validée en tests automatisés avant d'implémenter les changements correspondants.
