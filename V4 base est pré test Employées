@@ -1,0 +1,642 @@
+# V4 — Base Test : Formations IATA et employés
+
+**Version :** 1.0 — 5 novembre 2026  
+**Statut :** EN COURS D'ÉTUDE  
+**Objectif :** Identifier les contributions numériques individuelles des employés selon leur formation et leur niveau, afin de construire un futur simulateur RH.
+
+---
+
+# 1. Objectifs des bonus
+
+| Statistique | Objectif |
+|---|---:|
+| Ponctualité | 500 points |
+| Sécurité | 500 points |
+| Frais | -250 points |
+| Livraison cargo | 500 points |
+| Attractivité de l'offre | 500 points |
+| Confort | 500 points |
+| Demande passager | 500 points |
+| Distraction | 500 points |
+| Attractivité des tarifs | 500 points |
+| Revenus auxiliaires | 500 points |
+
+**Important :** les objectifs indiqués sont les valeurs de référence recherchées pour le futur simulateur.
+
+# 2. Catalogue des formations disponibles
+
+## Signification des symboles in-game
+
+- `-` : aucune contribution sur cette statistique.
+- `+` : intensité de gain affichée par le jeu.
+- `++`, `+++`, `+++++` : intensités de gain supérieures affichées par le jeu.
+
+Ces symboles décrivent les indications du jeu. Ils ne constituent pas encore des coefficients numériques validés.
+
+## 2.1 Opérations aéroportuaires
+
+### Débutant
+
+**1.1 — Aviation et Environnement**
+- Ponctualité : -
+- Sécurité : +
+- Frais : -
+
+**1.2 — Service client à l'aéroport (TAPP-18)**
+- Ponctualité : +
+- Sécurité : -
+- Frais : -
+
+**1.3 — Services de gestion de trafic aéroportuaire**
+- Ponctualité : -
+- Sécurité : -
+- Frais : +
+
+### Professionnels
+
+**1.1 — Opérations aéroportuaires - Avancé**
+- Ponctualité : ++
+- Sécurité : -
+- Frais : ++
+
+**1.2 — Services aéroportuaire - Traitement des passagers**
+- Ponctualité : ++
+- Sécurité : ++
+- Frais : -
+
+**1.3 — Optimisation des opérations de sécurité aéroportuaire**
+- Ponctualité : -
+- Sécurité : ++
+- Frais : ++
+
+### Managers
+
+**1.1 — Gestion stratégique aéroportuaire**
+- Ponctualité : ++
+- Sécurité : +++
+- Frais : +++++
+
+**1.2 — Développement du leadership en aviation**
+- Ponctualité : +++
+- Sécurité : +++++
+- Frais : ++
+
+**1.3 — Conception et planification de terminal aéroportuaire**
+- Ponctualité : +++++
+- Sécurité : ++
+- Frais : +++
+
+## 2.2 Cargo
+
+### Débutant
+
+**2.1 — Cours d'introduction au cargo**
+- Frais : -
+- Livraison cargo : +
+- Attractivité de l'offre : -
+
+**2.2 — Marketing et publicité pour le cargo**
+- Frais : +
+- Livraison cargo : -
+- Attractivité de l'offre : -
+
+**2.3 — Modes de transport et chaîne logistique pour le cargo**
+- Frais : -
+- Livraison cargo : -
+- Attractivité de l'offre : +
+
+### Professionnels
+
+**2.1 — Opérations cargo : température contrôlée**
+- Frais : ++
+- Livraison cargo : -
+- Attractivité de l'offre : ++
+
+**2.2 — Techniques et procédures relatives au cargo**
+- Frais : ++
+- Livraison cargo : ++
+- Attractivité de l'offre : -
+
+**2.3 — Transport d'animaux vivants**
+- Frais : -
+- Livraison cargo : ++
+- Attractivité de l'offre : ++
+
+### Managers
+
+**2.1 — Gestion du cargo aérien**
+- Frais : ++
+- Livraison cargo : +++++
+- Attractivité de l'offre : +++
+
+**2.2 — Gestion de la sécurité et de la chaîne logistique**
+- Frais : ++
+- Livraison cargo : +++
+- Attractivité de l'offre : +++++
+
+**2.3 — Revenus cargo et gestion du rendement**
+- Frais : +++++
+- Livraison cargo : +++
+- Attractivité de l'offre : ++
+
+## 2.3 Services au sol
+
+### Débutant
+
+**3.1 — Services au sol pour les passagers**
+- Ponctualité : +
+- Confort : -
+- Demande passager : -
+
+**3.2 — Opérations au sol en VR**
+- Ponctualité : -
+- Confort : -
+- Demande passager : +
+
+**3.3 — Systèmes et services de gestion des bagages**
+- Ponctualité : -
+- Confort : +
+- Demande passager : -
+
+### Professionnels
+
+**3.1 — Service client aéroportuaire**
+- Ponctualité : ++
+- Confort : ++
+- Demande passager : -
+
+**3.2 — Réclamation et répartition des bagages**
+- Ponctualité : ++
+- Confort : -
+- Demande passager : ++
+
+**3.3 — Supervision du chargement et rotation des appareils**
+- Ponctualité : -
+- Confort : ++
+- Demande passager : ++
+
+### Managers
+
+**3.1 — Leadership et gestion des opérations au sol**
+- Ponctualité : +++++
+- Confort : +++
+- Demande passager : ++
+
+**3.2 — Gestion des services au sol**
+- Ponctualité : +++
+- Confort : +++++
+- Demande passager : ++
+
+**3.3 — Facteurs humains en opérations au sol**
+- Ponctualité : ++
+- Confort : +++
+- Demande passager : +++++
+
+## 2.4 Services de navigation
+
+### Débutant
+
+**4.1 — Facteurs humains en aviation**
+- Ponctualité : -
+- Sécurité : -
+- Frais : +
+
+**4.2 — Services d'information aéronautique**
+- Ponctualité : -
+- Sécurité : +
+- Frais : -
+
+**4.3 — Observation météorologique aéronautique**
+- Ponctualité : +
+- Sécurité : -
+- Frais : -
+
+### Professionnels
+
+**4.1 — Système de gestion de la sécurité- Avancé**
+- Ponctualité : ++
+- Sécurité : ++
+- Frais : -
+
+**4.2 — Gestion des risques opérationnels**
+- Ponctualité : -
+- Sécurité : ++
+- Frais : ++
+
+**4.3 — Mises a niveau du système de l'aviation (ASBU)**
+- Ponctualité : ++
+- Sécurité : -
+- Frais : ++
+
+### Managers
+
+**4.1 — Gestion du transport aérien**
+- Ponctualité : +++++
+- Sécurité : ++
+- Frais : +++
+
+**4.2 — Gestion de services de navigation aérienne**
+- Ponctualité : +++
+- Sécurité : ++
+- Frais : +++++
+
+**4.3 — Enquête et prévention des accidents**
+- Ponctualité : ++
+- Sécurité : +++++
+- Frais : +++
+
+## 2.5 Pôle management
+
+### Débutant
+
+**5.1 — Service client**
+- Distraction : +
+- Attractivité des tarifs : -
+- Revenus auxiliaires : -
+
+**5.2 — Les essentiels du business d'une compagnie aérienne**
+- Distraction : -
+- Attractivité des tarifs : +
+- Revenus auxiliaires : -
+
+**5.3 — Introduction au transport aérien**
+- Distraction : -
+- Attractivité des tarifs : -
+- Revenus auxiliaires : +
+
+### Professionnels
+
+**5.1 — Finance et compatibilité**
+- Distraction : -
+- Attractivité des tarifs : ++
+- Revenus auxiliaires : ++
+
+**5.2 — Acquisition et financement d'appareils**
+- Distraction : ++
+- Attractivité des tarifs : -
+- Revenus auxiliaires : ++
+
+**5.3 — Planification de lignes, flotte et horaires**
+- Distraction : ++
+- Attractivité des tarifs : ++
+- Revenus auxiliaires : -
+
+### Managers
+
+**5.1 — Business model et stratégie**
+- Distraction : ++
+- Attractivité des tarifs : +++++
+- Revenus auxiliaires : +++
+
+**5.2 — Gestion des revenus**
+- Distraction : ++
+- Attractivité des tarifs : +++
+- Revenus auxiliaires : +++++
+
+**5.3 — Développement et prévision de lignes**
+- Distraction : +++++
+- Attractivité des tarifs : +++
+- Revenus auxiliaires : ++
+
+---
+
+# 3. Salaires de référence
+
+**Salaires par poste et par employé, sans bonus de recherche :**
+
+| Poste | Salaire quotidien |
+|---|---:|
+| Intérimaire | 330 $ |
+| Recrue | 294 $ |
+| Débutant | 346 $ |
+| Professionnel | 367 $ |
+| Manager | 588 $ |
+
+Ces valeurs constituent la base salariale de référence actuelle. Les éventuelles modifications dues aux recherches ou au management seront étudiées séparément.
+
+---
+
+# 4. Protocole expérimental
+
+## 4.1 Méthode de test retenue
+
+La campagne de mesure utilise désormais **un seul employé par expérience**, suivi progressivement au cours de ses formations.
+
+Ordre de progression :
+
+1. Former l'employé au niveau Débutant.
+2. Relever les contributions obtenues.
+3. Faire évoluer ce même employé au niveau Professionnel.
+4. Relever les nouvelles contributions.
+5. Faire évoluer ce même employé au niveau Manager.
+6. Relever les trois contributions obtenues.
+
+Cette méthode doit permettre d'isoler les contributions individuelles et d'éviter les cumuls involontaires entre plusieurs employés.
+
+**Règle expérimentale :** aucun autre employé ne doit être ajouté à l'expérience susceptible de modifier les bonus étudiés. Les conditions de test doivent rester identiques pendant les comparaisons.
+
+## 4.2 Nombre de contributions à mesurer par niveau
+
+Chaque niveau ne produit pas le même nombre de statistiques contributives :
+
+| Niveau | Nombre de statistiques contributives | Valeurs numériques à enregistrer |
+|---|---:|---:|
+| Débutant | 1 | 1 |
+| Professionnel | 2 | 2 |
+| Manager | 3 | 3 |
+
+**Précision importante concernant les Managers :**
+
+Les trois statistiques d'un Manager peuvent avoir des intensités différentes.
+
+Exemple :
+- Statistique 1 : ++
+- Statistique 2 : +++
+- Statistique 3 : +++++
+
+Il faut donc enregistrer trois valeurs numériques distinctes, chacune associée à sa statistique et à son intensité in-game.
+
+Il ne faut jamais remplacer ces trois mesures par une valeur globale unique.
+
+---
+
+# 5. Registre des contributions individuelles
+
+## 5.1 Structure des relevés
+
+Pour chaque formation, les données suivantes doivent être conservées :
+
+- Identifiant de la formation.
+- Nom exact de la formation.
+- Niveau de formation.
+- Statistique concernée.
+- Intensité symbolique affichée en jeu.
+- Contribution numérique individuelle mesurée.
+- Nombre d'employés présents dans l'expérience.
+- Bonus avant formation.
+- Bonus après formation.
+- Données HTML disponibles.
+- Statut de validation.
+
+Les contributions numériques seront enregistrées avec leur précision complète, sans arrondi volontaire.
+
+## 5.2 Première campagne — Observations déjà obtenues
+
+**Catégorie : Opérations aéroportuaires**
+
+### Débutants
+
+| Formation | Statistique contributive | Contribution observée |
+|---|---|---:|
+| 1.1 — Aviation et Environnement | Sécurité | 0.002 |
+| 1.2 — Service client à l'aéroport (TAPP-18) | Ponctualité | 0.002 |
+| 1.3 — Services de gestion de trafic aéroportuaire | Frais | 0.002 |
+
+**Statut : OBSERVÉ**
+
+Précision : une expérience avec deux employés débutants a également donné une contribution cumulée de 0.004 dans le contexte testé.
+
+Cette première campagne reste conservée comme référence historique. Elle devra être comparée à la nouvelle campagne isolée.
+
+## 5.3 Registre de mesure — 45 formations
+
+Les champs numériques sont à compléter au fur et à mesure des tests.
+
+### 1. Opérations aéroportuaires
+
+**Débutants — 1 contribution par formation**
+
+| Formation | Statistique | Intensité | Valeur individuelle |
+|---|---|---|---:|
+| 1.1 | Sécurité | + | 0.002* |
+| 1.2 | Ponctualité | + | 0.002* |
+| 1.3 | Frais | + | 0.002* |
+
+*Premières observations de la campagne précédente, à confirmer avec le nouveau protocole.*
+
+**Professionnels — 2 contributions par formation**
+
+| Formation | Statistique 1 | Valeur 1 | Statistique 2 | Valeur 2 |
+|---|---|---:|---|---:|
+| 1.1 | Ponctualité (++) | À mesurer | Frais (++) | À mesurer |
+| 1.2 | Ponctualité (++) | À mesurer | Sécurité (++) | À mesurer |
+| 1.3 | Sécurité (++) | À mesurer | Frais (++) | À mesurer |
+
+**Managers — 3 contributions par formation**
+
+| Formation | Statistique 1 | Valeur 1 | Statistique 2 | Valeur 2 | Statistique 3 | Valeur 3 |
+|---|---|---:|---|---:|---|---:|
+| 1.1 | Ponctualité (++) | À mesurer | Sécurité (+++) | À mesurer | Frais (+++++) | À mesurer |
+| 1.2 | Ponctualité (+++) | À mesurer | Sécurité (+++++) | À mesurer | Frais (++) | À mesurer |
+| 1.3 | Ponctualité (+++++) | À mesurer | Sécurité (++) | À mesurer | Frais (+++) | À mesurer |
+
+### 2. Cargo
+
+**Débutants — 1 contribution par formation**
+
+| Formation | Statistique | Intensité | Valeur individuelle |
+|---|---|---|---:|
+| 2.1 | Livraison cargo | + | À mesurer |
+| 2.2 | Frais | + | À mesurer |
+| 2.3 | Attractivité de l'offre | + | À mesurer |
+
+**Professionnels — 2 contributions par formation**
+
+| Formation | Statistique 1 | Valeur 1 | Statistique 2 | Valeur 2 |
+|---|---|---:|---|---:|
+| 2.1 | Frais (++) | À mesurer | Attractivité de l'offre (++) | À mesurer |
+| 2.2 | Frais (++) | À mesurer | Livraison cargo (++) | À mesurer |
+| 2.3 | Livraison cargo (++) | À mesurer | Attractivité de l'offre (++) | À mesurer |
+
+**Managers — 3 contributions par formation**
+
+| Formation | Statistique 1 | Valeur 1 | Statistique 2 | Valeur 2 | Statistique 3 | Valeur 3 |
+|---|---|---:|---|---:|---|---:|
+| 2.1 | Frais (++) | À mesurer | Livraison cargo (+++++) | À mesurer | Attractivité de l'offre (+++) | À mesurer |
+| 2.2 | Frais (++) | À mesurer | Livraison cargo (+++) | À mesurer | Attractivité de l'offre (+++++) | À mesurer |
+| 2.3 | Frais (+++++) | À mesurer | Livraison cargo (+++) | À mesurer | Attractivité de l'offre (++) | À mesurer |
+
+### 3. Services au sol
+
+**Débutants — 1 contribution par formation**
+
+| Formation | Statistique | Intensité | Valeur individuelle |
+|---|---|---|---:|
+| 3.1 | Ponctualité | + | À mesurer |
+| 3.2 | Demande passager | + | À mesurer |
+| 3.3 | Confort | + | À mesurer |
+
+**Professionnels — 2 contributions par formation**
+
+| Formation | Statistique 1 | Valeur 1 | Statistique 2 | Valeur 2 |
+|---|---|---:|---|---:|
+| 3.1 | Ponctualité (++) | À mesurer | Confort (++) | À mesurer |
+| 3.2 | Ponctualité (++) | À mesurer | Demande passager (++) | À mesurer |
+| 3.3 | Confort (++) | À mesurer | Demande passager (++) | À mesurer |
+
+**Managers — 3 contributions par formation**
+
+| Formation | Statistique 1 | Valeur 1 | Statistique 2 | Valeur 2 | Statistique 3 | Valeur 3 |
+|---|---|---:|---|---:|---|---:|
+| 3.1 | Ponctualité (+++++) | À mesurer | Confort (+++) | À mesurer | Demande passager (++) | À mesurer |
+| 3.2 | Ponctualité (+++) | À mesurer | Confort (+++++) | À mesurer | Demande passager (++) | À mesurer |
+| 3.3 | Ponctualité (++) | À mesurer | Confort (+++) | À mesurer | Demande passager (+++++) | À mesurer |
+
+### 4. Services de navigation
+
+**Débutants — 1 contribution par formation**
+
+| Formation | Statistique | Intensité | Valeur individuelle |
+|---|---|---|---:|
+| 4.1 | Frais | + | À mesurer |
+| 4.2 | Sécurité | + | À mesurer |
+| 4.3 | Ponctualité | + | À mesurer |
+
+**Professionnels — 2 contributions par formation**
+
+| Formation | Statistique 1 | Valeur 1 | Statistique 2 | Valeur 2 |
+|---|---|---:|---|---:|
+| 4.1 | Ponctualité (++) | À mesurer | Sécurité (++) | À mesurer |
+| 4.2 | Sécurité (++) | À mesurer | Frais (++) | À mesurer |
+| 4.3 | Ponctualité (++) | À mesurer | Frais (++) | À mesurer |
+
+**Managers — 3 contributions par formation**
+
+| Formation | Statistique 1 | Valeur 1 | Statistique 2 | Valeur 2 | Statistique 3 | Valeur 3 |
+|---|---|---:|---|---:|---|---:|
+| 4.1 | Ponctualité (+++++) | À mesurer | Sécurité (++) | À mesurer | Frais (+++) | À mesurer |
+| 4.2 | Ponctualité (+++) | À mesurer | Sécurité (++) | À mesurer | Frais (+++++) | À mesurer |
+| 4.3 | Ponctualité (++) | À mesurer | Sécurité (+++++) | À mesurer | Frais (+++) | À mesurer |
+
+### 5. Pôle management
+
+**Débutants — 1 contribution par formation**
+
+| Formation | Statistique | Intensité | Valeur individuelle |
+|---|---|---|---:|
+| 5.1 | Distraction | + | À mesurer |
+| 5.2 | Attractivité des tarifs | + | À mesurer |
+| 5.3 | Revenus auxiliaires | + | À mesurer |
+
+**Professionnels — 2 contributions par formation**
+
+| Formation | Statistique 1 | Valeur 1 | Statistique 2 | Valeur 2 |
+|---|---|---:|---|---:|
+| 5.1 | Attractivité des tarifs (++) | À mesurer | Revenus auxiliaires (++) | À mesurer |
+| 5.2 | Distraction (++) | À mesurer | Revenus auxiliaires (++) | À mesurer |
+| 5.3 | Distraction (++) | À mesurer | Attractivité des tarifs (++) | À mesurer |
+
+**Managers — 3 contributions par formation**
+
+| Formation | Statistique 1 | Valeur 1 | Statistique 2 | Valeur 2 | Statistique 3 | Valeur 3 |
+|---|---|---:|---|---:|---|---:|
+| 5.1 | Distraction (++) | À mesurer | Attractivité des tarifs (+++++) | À mesurer | Revenus auxiliaires (+++) | À mesurer |
+| 5.2 | Distraction (++) | À mesurer | Attractivité des tarifs (+++) | À mesurer | Revenus auxiliaires (+++++) | À mesurer |
+| 5.3 | Distraction (+++++) | À mesurer | Attractivité des tarifs (+++) | À mesurer | Revenus auxiliaires (++) | À mesurer |
+
+---
+
+# 6. Historique et données HTML
+
+Les données HTML sont conservées séparément des contributions numériques observées en jeu.
+
+Champs actuellement étudiés :
+
+- `data-basexp0/1/2`
+- `data-totalpoints0/1/2`
+- `data-statcurrent0/1/2`
+- `data-statnext0/1/2`
+- `data-isnegative0/1/2`
+- `data-globalpoints0/1/2`
+- `data-fromlabel`
+- `data-tolabel`
+
+## Première analyse HTML
+
+Valeurs relevées dans le fichier étudié :
+
+| Champ | Valeurs distinctes observées |
+|---|---|
+| `data-basexp` | 0.03 / 0.046 / 0.042 |
+
+Ces valeurs n'ont pas encore été identifiées comme des contributions individuelles.
+
+**Hypothèse en cours :** elles pourraient représenter des cumuls de contributions provenant de plusieurs employés et de plusieurs niveaux de formation.
+
+Cette hypothèse reste à vérifier avec le nouveau protocole expérimental.
+
+Les observations historiques de 0.002 et 0.004 restent conservées indépendamment.
+
+---
+
+# 7. Management et salaires
+
+## Règles affichées dans le jeu
+
+- Un manager peut encadrer jusqu'à 100 employés dans le même département.
+- Le jeu indique une réduction salariale de 10 % pour les employés encadrés.
+- Une réduction de 11 % apparaît dans l'interface.
+- Au-delà du ratio 1 manager pour 100 employés, le salaire des managers augmente.
+
+## État des connaissances
+
+| Élément | Statut |
+|---|---|
+| Ratio affiché 1/100 | OBSERVÉ |
+| Réduction annoncée de 10 % | OBSERVÉE dans le texte du jeu |
+| Réduction affichée de 11 % | OBSERVÉE dans l'interface |
+| Réduction fluctuant entre 10% et 11% | OBSERVÉE sur autres joueurs in-game |
+| Application réelle de la réduction | À TESTER |
+| Augmentation du salaire des managers au-delà de 1/100 | À TESTER |
+| Comparaison des ratios 1/100, 1/80 et 1/50 | À TESTER |
+
+**Règle actuelle du simulateur :** aucune réduction salariale de management ne sera appliquée tant que son fonctionnement réel n'aura pas été confirmé.
+
+La répartition des employés et des managers par département devra également être prise en compte. Un ratio global ne garantit pas nécessairement une couverture correcte de chaque département.
+
+---
+
+# 8. Convention de validation des données
+
+Chaque information ajoutée à la base doit posséder un statut clair.
+
+| Statut | Signification |
+|---|---|
+| OBSERVÉ | Valeur directement relevée en jeu ou dans une source |
+| CALCULÉ | Valeur obtenue par calcul à partir d'observations |
+| CONFIRMÉ | Résultat vérifié par des tests suffisamment concluants |
+| HYPOTHÈSE | Explication possible, non encore démontrée |
+| À TESTER | Expérience nécessaire pour vérifier une affirmation |
+| LITIGE | Résultats contradictoires ou incohérents |
+| ABANDONNÉ | Piste ou hypothèse écartée |
+
+**Règles de conservation :**
+
+1. Ne jamais remplacer une observation directe par une valeur calculée.
+2. Ne jamais arrondir volontairement les contributions numériques.
+3. Conserver les résultats contradictoires et leur contexte.
+4. Ne pas considérer les symboles d'intensité comme des multiplicateurs numériques sans validation.
+5. Distinguer les contributions individuelles des valeurs cumulées.
+6. Conserver les anciennes campagnes expérimentales même si une nouvelle méthode les remplace.
+
+---
+
+# 9. Objectif final du simulateur RH
+
+Le but de cette étude est de construire un simulateur capable de déterminer, à partir de zéro employé :
+
+- Le nombre optimal d'employés à recruter.
+- Les formations à privilégier.
+- Le niveau de formation nécessaire pour chaque employé.
+- La répartition des employés entre les différents départements.
+- Le nombre de managers nécessaire.
+- Le coût salarial quotidien total.
+
+Le simulateur devra chercher à atteindre les objectifs de bonus tout en optimisant simultanément le nombre d'employés et le coût salarial.
+
+**Objectif :** obtenir la meilleure organisation RH possible, sans imposer une composition unique et en laissant apparaître plusieurs solutions viables.
+
+---
+
+**Fin de la base de référence — V4 Formations IATA et employés**  
+**Statut général : EN COURS D'ÉTUDE**
