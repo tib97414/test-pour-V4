@@ -408,9 +408,9 @@ Les champs numériques sont à compléter au fur et à mesure des tests.
 
 | Formation | Statistique | Intensité | Valeur individuelle |
 |---|---|---|---:|
-| 1.1 | Sécurité | + | 0.002* |
-| 1.2 | Ponctualité | + | 0.002* |
-| 1.3 | Frais | + | 0.002* |
+| 1.1 | Sécurité | + | 0.002 |
+| 1.2 | Ponctualité | + | 0.002 |
+| 1.3 | Frais | + | (-) 0.002 |
 
 *Premières observations de la campagne précédente, à confirmer avec le nouveau protocole.*
 
@@ -436,9 +436,9 @@ Les champs numériques sont à compléter au fur et à mesure des tests.
 
 | Formation | Statistique | Intensité | Valeur individuelle |
 |---|---|---|---:|
-| 2.1 | Livraison cargo | + | À mesurer |
-| 2.2 | Frais | + | À mesurer |
-| 2.3 | Attractivité de l'offre | + | À mesurer |
+| 2.1 | Livraison cargo | + | 0.002 |
+| 2.2 | Frais | + | (-) 0.002 |
+| 2.3 | Attractivité de l'offre | + | 0.002 |
 
 **Professionnels — 2 contributions par formation**
 
@@ -462,9 +462,9 @@ Les champs numériques sont à compléter au fur et à mesure des tests.
 
 | Formation | Statistique | Intensité | Valeur individuelle |
 |---|---|---|---:|
-| 3.1 | Ponctualité | + | À mesurer |
-| 3.2 | Demande passager | + | À mesurer |
-| 3.3 | Confort | + | À mesurer |
+| 3.1 | Ponctualité | + | 0.002 |
+| 3.2 | Demande passager | + | 0.002 |
+| 3.3 | Confort | + | 0.002 |
 
 **Professionnels — 2 contributions par formation**
 
@@ -514,9 +514,9 @@ Les champs numériques sont à compléter au fur et à mesure des tests.
 
 | Formation | Statistique | Intensité | Valeur individuelle |
 |---|---|---|---:|
-| 5.1 | Distraction | + | À mesurer |
-| 5.2 | Attractivité des tarifs | + | À mesurer |
-| 5.3 | Revenus auxiliaires | + | À mesurer |
+| 5.1 | Distraction | + | 0.002 |
+| 5.2 | Attractivité des tarifs | + | 0.002 |
+| 5.3 | Revenus auxiliaires | + | 0.002 |
 
 **Professionnels — 2 contributions par formation**
 
