@@ -1922,7 +1922,79 @@ Maintien du litige ouvert sur la cause exacte des écarts.
 
 ───
 
-18. A330-800 — retrait d'un siège éco par avion sur CGK → EBU
+
+18. A330-800 — retrait d'une tonne de cargo sur CGK → EBU
+
+Route : CGK → EBU
+Catégorie de route : 6
+Distance : 11 458 km
+Avion : A330-800, catégorie 5, consommation 2,27 L/pax/100 km
+
+Configuration avant :
+264 éco / 32 business / 20 première / 12 cargo par avion
+Masse calculée : 45,40 t
+Cargo visible dans les résultats : 24
+
+Configuration après retrait :
+264 éco / 32 business / 20 première / 11 cargo par avion
+Masse calculée : 44,40 t
+Variation de masse : −1,00 t
+Cargo visible dans les résultats : 22
+
+Résultats observés avant :
+Kérosène : 221 407 $
+Frais d'aéroport : 39 971 $
+Revenus auxiliaires : 541 576 $
+CA billetterie : 3 124 112 $
+CA total : 3 665 688 $
+Coûts : 261 378 $
+Résultat : 3 404 310 $
+
+Résultats observés après :
+Kérosène : 216 530 $
+Frais d'aéroport : 39 971 $
+Revenus auxiliaires : 545 232 $
+CA billetterie : 3 089 760 $
+CA total : 3 634 992 $
+Coûts : 256 501 $
+Résultat : 3 378 491 $
+
+Variations observées :
+Kérosène : −4 877 $
+Frais d'aéroport : 0 $
+Revenus auxiliaires : +3 656 $
+CA billetterie : −34 352 $
+CA total : −30 696 $
+Coûts : −4 877 $
+Résultat : −25 819 $
+
+Vérification de la formule carburant :
+0,1875 × 11 458 × 2,27 × 1,00 = 4 876,81125 $.
+Baisse observée : 4 877 $.
+Écart observé − calculé : +0,18875 $, soit environ +0,19 $.
+
+Vérification billetterie :
+Deux unités cargo comptabilisées en moins × 17 176 $ = 34 352 $.
+Baisse observée : 34 352 $.
+Correspondance exacte.
+
+Revenus auxiliaires :
+Les revenus auxiliaires augmentent de 3 656 $ malgré le retrait d'une tonne de cargo par avion.
+Cette variation est enregistrée comme observation ; elle ne permet pas, à elle seule, d'établir une formule des revenus auxiliaires.
+
+Frais et cohérence comptable :
+Les frais d'aéroport restent à 39 971 $.
+La baisse du CA total est de 30 696 $ ; les coûts diminuent de 4 877 $. Le résultat baisse donc de 25 819 $, conformément aux valeurs observées.
+
+Statuts :
+[OBSERVÉ] — retrait d'une tonne de cargo par avion ; masse calculée diminuée de 1,00 t ; carburant −4 877 $ ; frais d'aéroport inchangés.
+[CONFIRMÉ — dans le contexte testé] — variation du carburant conforme à la formule masse/distance/consommation à environ 0,19 $ près.
+[CONFIRMÉ — dans le contexte testé] — baisse de billetterie égale exactement à deux unités cargo comptabilisées au tarif de 17 176 $.
+[OBSERVÉ] — revenus auxiliaires en hausse de 3 656 $ ; mécanisme non déterminé.
+
+D091 — A330-800 CGK → EBU : retrait d'une tonne de cargo par avion (−1,00 t) ; kérosène −4 877 $, formule −4 876,81 $ ; billetterie −34 352 $ exactement ; auxiliaires +3 656 $. [OBSERVÉ / CONFIRMATION DANS LE CONTEXTE TESTÉ]
+
+19. A330-800 — retrait d'un siège éco par avion sur CGK → EBU
 
 Route : CGK → EBU
 Catégorie de route : 6
@@ -1988,9 +2060,13 @@ Statuts :
 [OBSERVÉ] — revenus auxiliaires en hausse de 106 $ ; mécanisme non déterminé.
 [LITIGE / ESSAI NON COMPARABLE] — précédent relevé avec frais PAX à −395 au lieu de −485 ; ne pas utiliser pour établir l'effet du retrait de siège sur les auxiliaires.
 
-D091 — A330-800 CGK → EBU : retrait d'un siège éco par avion (−0,10 t) ; kérosène −488 $, formule −487,68 $ ; billetterie −7 504 $ exactement ; auxiliaires +106 $ avec bonus revenus auxiliaires +1 000 et frais PAX −485 rétablis. [OBSERVÉ / CONFIRMATION DANS LE CONTEXTE TESTÉ]
+D092 — A330-800 CGK → EBU : retrait d'un siège éco par avion (−0,10 t) ; kérosène −488 $, formule −487,68 $ ; billetterie −7 504 $ exactement ; auxiliaires +106 $ avec bonus revenus auxiliaires +1 000 et frais PAX −485 rétablis. [OBSERVÉ / CONFIRMATION DANS LE CONTEXTE TESTÉ]
 
-Version 1.1
+Version 1.2
+
+Ajout du test A330-800 de retrait d'une tonne de cargo, placé avant le test de retrait d'un siège éco.
+La formule carburant est cohérente à environ 0,19 $ près ; la billetterie baisse exactement de 34 352 $.
+Les revenus auxiliaires augmentent de 3 656 $ ; aucune formule n'est déduite.
 
 Ajout du test contrôlé A330-800 sur CGK → EBU avec retrait d'un siège éco par avion.
 Les bonus ont été rétablis à leur niveau de référence (revenus auxiliaires +1 000 ; frais PAX −485), contrairement au précédent essai perturbé.
