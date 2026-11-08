@@ -1919,3 +1919,80 @@ Ajout de la comparaison des frais d'aéroport sur CGK → EBU entre les catégor
 Conservation des frais observés et des écarts de +1 $ et +2 $ par rapport à la formule candidate.
 Ajout de l'hypothèse de précision interne des taxes et/ou d'arrondis, sans la considérer comme démontrée.
 Maintien du litige ouvert sur la cause exacte des écarts.
+
+───
+
+18. A330-800 — retrait d'un siège éco par avion sur CGK → EBU
+
+Route : CGK → EBU
+Catégorie de route : 6
+Distance : 11 458 km
+Avion : A330-800, catégorie 5, consommation 2,27 L/pax/100 km
+Configuration de référence : 264 éco / 32 business / 20 première / 12 cargo par avion
+Masse calculée de référence : 45,40 t
+Configuration testée : 263 éco / 32 business / 20 première / 12 cargo par avion
+Masse calculée après retrait : 45,30 t
+Variation de masse : −0,10 t
+Les résultats comptabilisent deux sièges éco en moins (un siège retiré de la configuration de l'avion, résultats aller-retour).
+
+Paramètres de contrôle :
+Les statistiques de bonus ont été rétablies à leur niveau de référence avant ce nouveau relevé : revenus auxiliaires PAX +1 000 au total (plafond atteint) et frais PAX −485. Le précédent essai affichant des frais à −395 n'est pas comparable pour l'analyse des revenus auxiliaires et ne doit pas servir de référence.
+
+Résultats observés avant :
+Kérosène : 221 407 $
+Frais d'aéroport : 39 971 $
+Revenus auxiliaires : 541 576 $
+CA billetterie : 3 124 112 $
+CA total : 3 665 688 $
+Coûts : 261 378 $
+Résultat : 3 404 310 $
+
+Résultats observés après :
+Kérosène : 220 919 $
+Frais d'aéroport : 39 971 $
+Revenus auxiliaires : 541 682 $
+CA billetterie : 3 116 608 $
+CA total : 3 658 290 $
+Coûts : 260 890 $
+Résultat : 3 397 400 $
+
+Variations observées :
+Kérosène : −488 $
+Frais d'aéroport : 0 $
+Revenus auxiliaires : +106 $
+CA billetterie : −7 504 $
+CA total : −7 398 $
+Coûts : −488 $
+Résultat : −6 910 $
+
+Vérification de la formule carburant :
+Variation calculée : 0,1875 × 11 458 × 2,27 × 0,10 = 487,68 $.
+Baisse observée : 488 $.
+Écart observé − calculé : +0,32 $.
+La formule reste cohérente avec l'observation, à moins d'un dollar près.
+
+Vérification billetterie :
+2 sièges éco comptabilisés en moins × 3 752 $ = 7 504 $.
+Baisse observée : 7 504 $.
+Correspondance exacte.
+
+Revenus auxiliaires :
+Les revenus auxiliaires passent de 541 576 $ à 541 682 $, soit une hausse de 106 $ malgré deux sièges éco comptabilisés en moins.
+Ce résultat remplace, pour la comparaison contrôlée du retrait d'un siège éco, le précédent essai perturbé par la variation des bonus. L'écart antérieur de −50 596 $ ne doit pas être interprété comme l'effet du retrait de sièges.
+Aucune formule des revenus auxiliaires n'est déduite de cette seule observation.
+
+Statuts :
+[OBSERVÉ] — retrait d'un siège éco par avion ; masse calculée diminuée de 0,10 t ; carburant −488 $ ; frais d'aéroport inchangés.
+[CONFIRMÉ — dans le contexte testé] — variation du carburant conforme à la formule masse/distance/consommation à 0,32 $ près.
+[CONFIRMÉ — dans le contexte testé] — baisse de billetterie égale exactement au prix de deux sièges éco comptabilisés.
+[OBSERVÉ] — revenus auxiliaires en hausse de 106 $ ; mécanisme non déterminé.
+[LITIGE / ESSAI NON COMPARABLE] — précédent relevé avec frais PAX à −395 au lieu de −485 ; ne pas utiliser pour établir l'effet du retrait de siège sur les auxiliaires.
+
+D091 — A330-800 CGK → EBU : retrait d'un siège éco par avion (−0,10 t) ; kérosène −488 $, formule −487,68 $ ; billetterie −7 504 $ exactement ; auxiliaires +106 $ avec bonus revenus auxiliaires +1 000 et frais PAX −485 rétablis. [OBSERVÉ / CONFIRMATION DANS LE CONTEXTE TESTÉ]
+
+Version 1.1
+
+Ajout du test contrôlé A330-800 sur CGK → EBU avec retrait d'un siège éco par avion.
+Les bonus ont été rétablis à leur niveau de référence (revenus auxiliaires +1 000 ; frais PAX −485), contrairement au précédent essai perturbé.
+La formule carburant reste cohérente à 0,32 $ près ; la billetterie baisse exactement de 7 504 $.
+Les revenus auxiliaires augmentent de 106 $ ; aucune formule n'est déduite.
